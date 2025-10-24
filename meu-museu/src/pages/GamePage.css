@@ -1,0 +1,77 @@
+/* src/pages/GamePage.css */
+
+.game-page-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.game-header {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 20px;
+}
+
+.game-main-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 25px;
+  flex-shrink: 0; 
+}
+
+.game-header-info h1 {
+  margin-top: 0;
+}
+
+.game-content {
+  margin-top: 20px;
+}
+
+.game-content h3 {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+.game-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.game-gallery img {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.game-tips {
+  padding-left: 20px;
+}
+.game-tips li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .game-page-container {
+    margin: 10px;
+    padding: 15px;
+  }
+  .game-header {
+    flex-direction: column;
+  }
+  .game-main-image {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}

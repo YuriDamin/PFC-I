@@ -1,0 +1,48 @@
+.console-page-layout {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: calc(100vh - 80px); /* 80px é uma altura aprox. do header */
+}
+
+/* --- Painel da Esquerda (Detalhes) --- */
+.console-details-pane {
+  flex-basis: 50%;
+  border-right: 2px solid #ddd;
+  padding: 25px;
+  background: #ffffff;
+  overflow-y: auto;
+}
+.console-image {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 15px auto;
+  border-radius: 8px;
+}
+.console-history {
+  line-height: 1.6;
+}
+
+/* --- Painel da Direita (Jogos) --- */
+.game-list-pane {
+  flex-basis: 50%;
+  padding: 25px;
+  background: #f9f9f9;
+  overflow-y: auto;
+}
+.game-list-pane h3 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+}
+
+/* --- Responsivo --- */
+@media (max-width: 768px) {
+  .console-page-layout {
+    flex-direction: column;
+  }
+  .console-details-pane {
+    border-right: none;
+    border-bottom: 2px solid #ddd;
+  }
+}
