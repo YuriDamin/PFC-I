@@ -1,68 +1,401 @@
-.home-container{
+.home-container {
   padding: 20px;
   max-width: 1300px;
   margin: 0 auto;
   text-align: center;
 }
 
-.home-container h2{
-  margin: 0 0 10px 0;
+.home-container h2 {
+  margin-bottom: 16px;
   font-weight: 800;
-  letter-spacing: .4px;
+  letter-spacing: 0.4px;
 }
 
-.timeline-slider{
-  padding-top: 20px;
-  padding-bottom: 56px;
-}
-
-/* Cabeçalho do slide: geração/ano em pill */
-.slide-info-header{
-  display:flex; justify-content:space-between; align-items:center;
-  padding: 0 8px; margin-bottom: 10px; font-weight: 700;
-}
-.info-geracao{
-  font-size:.85rem; color: var(--text);
-  background: rgba(28,43,64,.65);
+/* --- Botão principal (mostrar/ocultar filtros) --- */
+.toggle-filters-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text);
+  background: linear-gradient(180deg, rgba(28,43,64,0.9), rgba(28,43,64,0.7));
   border: 1px solid var(--border);
-  padding: 6px 10px; border-radius: 999px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-bottom: 10px;
+  box-shadow: var(--shadow);
 }
-.info-ano{
-  font-size: 1rem; color: var(--muted);
+.toggle-filters-btn:hover {
+  border-color: rgba(0,196,154,0.5);
+  box-shadow: var(--ring);
+  transform: translateY(-1px);
 }
 
-/* Card do console (glass + glow) */
-.console-card{
-  display:flex; flex-direction:column; height:100%;
-  background: linear-gradient(180deg, rgba(28,43,64,.8), rgba(28,43,64,.55));
-  border:1px solid var(--border);
+/* Seta animada */
+.arrow-icon {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--text);
+  transition: transform 0.25s ease, border-top-color 0.25s ease;
+}
+.toggle-filters-btn.open .arrow-icon {
+  transform: rotate(180deg);
+  border-top-color: var(--primary);
+}
+
+/* --- Painel do filtro (animado) --- */
+.filter-wrapper {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: scaleY(0.9);
+  transform-origin: top;
+  transition: all 0.35s ease;
+  margin-bottom: 10px;
+}
+.filter-wrapper.open {
+  max-height: 300px;
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+/* --- Container interno dos filtros --- */
+.filters-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: linear-gradient(180deg, rgba(28,43,64,0.85), rgba(28,43,64,0.55));
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+/* --- Grupos (Empresa / Geração) --- */
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
   color: var(--text);
-  text-decoration:none;
-  overflow:hidden;
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-}
-.console-card:hover{
-  transform: translateY(-6px);
-  border-color: rgba(0,196,154,.4);
-  box-shadow: 0 0 0 2px rgba(0,196,154,.18), 0 18px 40px rgba(0,0,0,.45);
-}
-.console-card img{
-  width:100%; height:220px; object-fit:contain;
-  background: linear-gradient(180deg, #0f2137, #0c1a2b);
-  border-bottom:1px solid var(--border);
-}
-.console-card h3{
-  padding: 18px;
-  margin: 0; flex-grow:1;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  min-width: 260px;
 }
 
-/* Força o slide como coluna */
-.swiper-slide{ display:flex; flex-direction:column; height:auto; }
+/* --- Título do grupo --- */
+.filter-group label {
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+}
 
-/* Swiper arrows/bullets com neon */
-.swiper-button-next, .swiper-button-prev{ color: var(--text) !important; }
-.swiper-button-next:hover, .swiper-button-prev:hover{ text-shadow: 0 0 14px rgba(0,196,154,.6); }
-.swiper-pagination-bullet{ opacity:.5; background: #6b7280 !important; }
-.swiper-pagination-bullet-active{ background: var(--primary) !important; opacity: 1; }
+/* --- Botões dos filtros --- */
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.filter-btn {
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: rgba(28,43,64,0.7);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.filter-btn:hover {
+  border-color: rgba(0,196,154,0.4);
+  transform: translateY(-2px);
+  box-shadow: var(--ring);
+}
+
+/* Estado ativo */
+.filter-btn.active {
+  color: var(--primary);
+  border-color: var(--primary);
+  background: rgba(0,196,154,0.15);
+  box-shadow: var(--ring);
+}
+
+/* --- Responsivo --- */
+@media (max-width: 768px) {
+  .filter-group {
+    min-width: 100%;
+  }
+}
+
+/* --- REAJUSTE DO SWIPER PARA MANTER TAMANHO DOS CARDS --- */
+
+.timeline-slider {
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+/* Mantém slides alinhados e de tamanho fixo */
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: auto;
+}
+
+.console-card {
+  background: linear-gradient(180deg, rgba(28,43,64,0.8), rgba(28,43,64,0.55));
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: var(--text);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 280px; /* 🔹 força altura uniforme dos cards */
+  max-height: 340px;
+}
+
+.console-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0,196,154,0.4);
+  box-shadow: 0 0 15px rgba(0,196,154,0.25);
+}
+
+.console-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background-color: #0f1a2e;
+  border-bottom: 1px solid var(--border);
+}
+
+.console-card h3 {
+  padding: 16px;
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Garante proporção e espaçamento igual aos anteriores */
+.slide-info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.info-geracao {
+  font-size: 0.85rem;
+  color: #94A3B8;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.info-ano {
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+/* Seta e bullets */
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--text) !important;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  text-shadow: 0 0 10px rgba(0,196,154,0.7);
+}
+.swiper-pagination-bullet-active {
+  background: var(--primary) !important;
+}
+
+/* --- EFEITO DE ILUMINAÇÃO / BRILHO DINÂMICO (PS2 STYLE) --- */
+
+.console-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.console-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(0, 196, 154, 0.15) 40%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 70%
+  );
+  transform: skewX(-25deg);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.console-card:hover::before {
+  animation: holo-glow 1.3s ease-in-out;
+  opacity: 1;
+}
+
+/* --- Animação suave do brilho --- */
+@keyframes holo-glow {
+  0% {
+    left: -75%;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.8;
+  }
+  100% {
+    left: 130%;
+    opacity: 0;
+  }
+}
+
+/* --- CORES POR EMPRESA (usadas no contorno e brilho) --- */
+.brand-nintendo {
+  border-color: rgba(0,196,154,0.4);
+}
+.brand-nintendo:hover::before {
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(0,196,154,0.25) 40%,
+    rgba(255,255,255,0.08) 50%,
+    transparent 70%
+  );
+}
+.brand-nintendo:hover {
+  box-shadow: 0 0 20px rgba(0,196,154,0.25);
+}
+
+.brand-sega {
+  border-color: rgba(0,122,204,0.4);
+}
+.brand-sega:hover::before {
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(0,122,204,0.25) 40%,
+    rgba(255,255,255,0.08) 50%,
+    transparent 70%
+  );
+}
+.brand-sega:hover {
+  box-shadow: 0 0 20px rgba(0,122,204,0.25);
+}
+
+.brand-sony {
+  border-color: rgba(139,92,246,0.4);
+}
+.brand-sony:hover::before {
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(139,92,246,0.25) 40%,
+    rgba(255,255,255,0.08) 50%,
+    transparent 70%
+  );
+}
+.brand-sony:hover {
+  box-shadow: 0 0 20px rgba(139,92,246,0.25);
+}
+
+/* fallback */
+.brand-default {
+  border-color: rgba(255,255,255,0.1);
+}
+
+/* --- CORES POR GERAÇÃO (adicionadas ao card) --- */
+.gen-3 {
+  border-color: rgba(59, 130, 246, 0.4); /* Azul claro */
+}
+.gen-3:hover::before {
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(59, 130, 246, 0.25) 40%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 70%
+  );
+}
+.gen-3:hover {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.25);
+}
+
+.gen-4 {
+  border-color: rgba(34, 197, 94, 0.4); /* Verde */
+}
+.gen-4:hover::before {
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(34, 197, 94, 0.25) 40%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 70%
+  );
+}
+.gen-4:hover {
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.25);
+}
+
+.gen-5 {
+  border-color: rgba(234, 179, 8, 0.4); /* Amarelo */
+}
+.gen-5:hover::before {
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(234, 179, 8, 0.25) 40%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 70%
+  );
+}
+.gen-5:hover {
+  box-shadow: 0 0 20px rgba(234, 179, 8, 0.25);
+}
+
+.gen-6 {
+  border-color: rgba(168, 85, 247, 0.4); /* Roxo */
+}
+.gen-6:hover::before {
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(168, 85, 247, 0.25) 40%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 70%
+  );
+}
+.gen-6:hover {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.25);
+}
+
+/* fallback */
+.gen-default {
+  border-color: rgba(255, 255, 255, 0.1);
+}
