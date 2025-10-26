@@ -16,6 +16,7 @@ function HomePage() {
   const [selectedEmpresa, setSelectedEmpresa] = useState('todas');
   const [selectedGeracao, setSelectedGeracao] = useState('todas');
 
+  // Gera listas únicas
   const empresas = [...new Set(consoles.map((c) => c.fabricante))];
   const geracoes = [...new Set(consoles.map((c) => c.geracao))];
 
@@ -30,12 +31,12 @@ function HomePage() {
 
   // Define classe de cor por geração
   function getGenerationClass(geracao) {
-    const num = geracao.match(/\d+/); // extrai número
+    const num = geracao.match(/\d+/); // extrai número da string
     if (!num) return 'gen-default';
     return `gen-${num[0]}`;
   }
 
-  // Filtros
+  // Filtros combinados
   const consolesFiltrados = useMemo(() => {
     return consoles
       .filter((c) => {
@@ -50,7 +51,7 @@ function HomePage() {
     <div className="home-container">
       <h2>Selecione uma Era (Linha do Tempo)</h2>
 
-      {/* Botão principal de filtro */}
+      {/* Botão principal para abrir/fechar filtros */}
       <button
         className={`toggle-filters-btn ${showFilters ? 'open' : ''}`}
         onClick={() => setShowFilters(!showFilters)}
@@ -59,10 +60,10 @@ function HomePage() {
         <span className="arrow-icon" />
       </button>
 
-      {/* Painel de filtros */}
+      {/* Painel de filtros com botões coloridos */}
       <div className={`filter-wrapper ${showFilters ? 'open' : ''}`}>
         <div className="filters-row">
-          {/* EMPRESA */}
+          {/* --- EMPRESA --- */}
           <div className="filter-group">
             <label>Empresa</label>
             <div className="filter-buttons">
@@ -75,6 +76,7 @@ function HomePage() {
               {empresas.map((emp) => (
                 <button
                   key={emp}
+                  data-brand={emp}
                   className={`filter-btn ${selectedEmpresa === emp ? 'active' : ''}`}
                   onClick={() => setSelectedEmpresa(emp)}
                 >
@@ -84,7 +86,7 @@ function HomePage() {
             </div>
           </div>
 
-          {/* GERAÇÃO */}
+          {/* --- GERAÇÃO --- */}
           <div className="filter-group">
             <label>Geração</label>
             <div className="filter-buttons">
@@ -97,6 +99,7 @@ function HomePage() {
               {geracoes.map((g) => (
                 <button
                   key={g}
+                  data-gen={g}
                   className={`filter-btn ${selectedGeracao === g ? 'active' : ''}`}
                   onClick={() => setSelectedGeracao(g)}
                 >
@@ -108,7 +111,7 @@ function HomePage() {
         </div>
       </div>
 
-      {/* Swiper */}
+      {/* --- Swiper de consoles --- */}
       <Swiper
         modules={[Navigation, Pagination]}
         navigation

@@ -399,3 +399,84 @@
 .gen-default {
   border-color: rgba(255, 255, 255, 0.1);
 }
+
+/* === CORES NOS BOTÕES DE FILTRO === */
+
+/* Empresas */
+.filter-btn[data-brand="Nintendo"] {
+  border-color: rgba(0,196,154,0.4);
+  color: rgba(0,196,154,0.85);
+}
+.filter-btn[data-brand="Nintendo"].active {
+  background: rgba(0,196,154,0.15);
+  border-color: rgba(0,196,154,0.8);
+  box-shadow: 0 0 12px rgba(0,196,154,0.4);
+  color: #00c49a;
+}
+
+.filter-btn[data-brand="Sony"] {
+  border-color: rgba(139,92,246,0.4);
+  color: rgba(139,92,246,0.85);
+}
+.filter-btn[data-brand="Sony"].active {
+  background: rgba(139,92,246,0.15);
+  border-color: rgba(139,92,246,0.8);
+  box-shadow: 0 0 12px rgba(139,92,246,0.4);
+  color: #8b5cf6;
+}
+
+.filter-btn[data-brand="Sega"] {
+  border-color: rgba(0,122,204,0.4);
+  color: rgba(0,122,204,0.85);
+}
+.filter-btn[data-brand="Sega"].active {
+  background: rgba(0,122,204,0.15);
+  border-color: rgba(0,122,204,0.8);
+  box-shadow: 0 0 12px rgba(0,122,204,0.4);
+  color: #007acc;
+}
+
+/* Gerações */
+.filter-btn[data-gen="3ª Geração"] {
+  border-color: rgba(59,130,246,0.4);
+  color: rgba(59,130,246,0.85);
+}
+.filter-btn[data-gen="3ª Geração"].active {
+  background: rgba(59,130,246,0.15);
+  border-color: rgba(59,130,246,0.8);
+  box-shadow: 0 0 12px rgba(59,130,246,0.4);
+  color: #3b82f6;
+}
+
+.filter-btn[data-gen="4ª Geração"] {
+  border-color: rgba(34,197,94,0.4);
+  color: rgba(34,197,94,0.85);
+}
+.filter-btn[data-gen="4ª Geração"].active {
+  background: rgba(34,197,94,0.15);
+  border-color: rgba(34,197,94,0.8);
+  box-shadow: 0 0 12px rgba(34,197,94,0.4);
+  color: #22c55e;
+}
+
+.filter-btn[data-gen="5ª Geração"] {
+  border-color: rgba(234,179,8,0.4);
+  color: rgba(234,179,8,0.85);
+}
+.filter-btn[data-gen="5ª Geração"].active {
+  background: rgba(234,179,8,0.15);
+  border-color: rgba(234,179,8,0.8);
+  box-shadow: 0 0 12px rgba(234,179,8,0.4);
+  color: #eab308;
+}
+
+.filter-btn[data-gen="6ª Geração"] {
+  border-color: rgba(168,85,247,0.4);
+  color: rgba(168,85,247,0.85);
+}
+.filter-btn[data-gen="6ª Geração"].active {
+  background: rgba(168,85,247,0.15);
+  border-color: rgba(168,85,247,0.8);
+  box-shadow: 0 0 12px rgba(168,85,247,0.4);
+  color: #a855f7;
+}
