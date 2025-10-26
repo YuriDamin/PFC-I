@@ -1,27 +1,91 @@
 .game-list-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
-/* --- Legenda de gêneros --- */
+/* --- Botão para abrir/fechar filtros --- */
+.toggle-filters-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;
+  padding: 10px 16px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text);
+  background: linear-gradient(180deg, rgba(28,43,64,.9), rgba(28,43,64,.7));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+.toggle-filters-btn:hover {
+  border-color: rgba(0,196,154,.5);
+  box-shadow: var(--ring);
+  transform: translateY(-1px);
+}
+
+/* Ícone de seta animado ▼ / ▲ */
+.arrow-icon {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--text);
+  transition: transform 0.25s ease, border-top-color 0.25s ease;
+  margin-top: 2px;
+}
+.toggle-filters-btn.open .arrow-icon {
+  transform: rotate(180deg);
+  border-top-color: var(--primary);
+}
+
+/* --- Container animado dos filtros --- */
+.genre-legend-wrapper {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: scaleY(0.9);
+  transform-origin: top;
+  transition: all 0.3s ease;
+}
+.genre-legend-wrapper.open {
+  max-height: 200px;
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+/* --- Legenda propriamente dita --- */
 .genre-legend {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  padding: 4px 0 10px;
+  padding: 6px 0 8px;
 }
-
 .genre-legend .genre-badge {
-  font-weight: 700;
-  opacity: 0.9;
-  transition: transform 0.15s ease, opacity 0.15s ease;
+  cursor: pointer;
+  user-select: none;
+  opacity: .9;
+  transition: transform .15s ease, opacity .15s ease, box-shadow .15s ease, background .15s ease;
 }
-
 .genre-legend .genre-badge:hover {
   transform: translateY(-2px);
   opacity: 1;
   box-shadow: var(--ring);
+}
+.genre-legend .genre-badge.active {
+  background: rgba(255,255,255,.06);
+  box-shadow: var(--ring);
+}
+
+/* --- Feedback --- */
+.genre-feedback {
+  font-size: .9rem;
+  color: var(--muted);
 }
 
 /* --- Lista de jogos --- */
@@ -29,4 +93,13 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
+}
+
+/* --- Estado vazio --- */
+.empty-list {
+  padding: 16px;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  color: var(--muted);
+  background: rgba(0,0,0,.1);
 }
