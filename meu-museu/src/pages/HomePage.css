@@ -1,98 +1,68 @@
-/* src/pages/HomePage.css */
-
-.home-container {
+.home-container{
   padding: 20px;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   text-align: center;
 }
 
-.timeline-slider {
+.home-container h2{
+  margin: 0 0 10px 0;
+  font-weight: 800;
+  letter-spacing: .4px;
+}
+
+.timeline-slider{
   padding-top: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 56px;
 }
 
-/* --- 1. NOVOS ESTILOS PARA O CABEÇALHO DO SLIDE --- */
-.slide-info-header {
-  display: flex;
-  justify-content: space-between; /* Um item para cada lado */
-  align-items: center;
-  padding: 0 10px; /* Um leve padding para alinhar com o card */
-  margin-bottom: 10px; /* Espaço entre o texto e o card */
-  font-weight: bold;
+/* Cabeçalho do slide: geração/ano em pill */
+.slide-info-header{
+  display:flex; justify-content:space-between; align-items:center;
+  padding: 0 8px; margin-bottom: 10px; font-weight: 700;
+}
+.info-geracao{
+  font-size:.85rem; color: var(--text);
+  background: rgba(28,43,64,.65);
+  border: 1px solid var(--border);
+  padding: 6px 10px; border-radius: 999px;
+}
+.info-ano{
+  font-size: 1rem; color: var(--muted);
 }
 
-.info-geracao {
-  font-size: 0.9rem;
-  color: #666;
-  background-color: #eee;
-  padding: 4px 8px;
-  border-radius: 4px;
+/* Card do console (glass + glow) */
+.console-card{
+  display:flex; flex-direction:column; height:100%;
+  background: linear-gradient(180deg, rgba(28,43,64,.8), rgba(28,43,64,.55));
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  text-decoration:none;
+  overflow:hidden;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.console-card:hover{
+  transform: translateY(-6px);
+  border-color: rgba(0,196,154,.4);
+  box-shadow: 0 0 0 2px rgba(0,196,154,.18), 0 18px 40px rgba(0,0,0,.45);
+}
+.console-card img{
+  width:100%; height:220px; object-fit:contain;
+  background: linear-gradient(180deg, #0f2137, #0c1a2b);
+  border-bottom:1px solid var(--border);
+}
+.console-card h3{
+  padding: 18px;
+  margin: 0; flex-grow:1;
 }
 
-.info-ano {
-  font-size: 1.1rem;
-  color: #333; /* Cor escura para o ano */
-}
-/* --- FIM DOS NOVOS ESTILOS --- */
+/* Força o slide como coluna */
+.swiper-slide{ display:flex; flex-direction:column; height:auto; }
 
-
-/* --- 2. AJUSTES NO CARD --- */
-.console-card {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-decoration: none;
-  color: #333;
-  overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s;
-  
-  display: flex;
-  flex-direction: column;
-  height: 100%; /* Faz o card ocupar o espaço vertical restante */
-}
-
-.console-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-}
-
-.console-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-  background-color: #f4f4f4;
-  border-bottom: 1px solid #eee;
-}
-
-.console-card h3 {
-  padding: 20px;
-  margin: 0;
-  flex-grow: 1; /* Faz o <h3> preencher o espaço, empurrando o pé (se houver) */
-}
-
-/* --- 3. REMOVIDO o .console-year --- */
-/*
-.console-year { ... }
-*/
-
-/* --- 4. AJUSTE NO SWIPERSLIDE --- */
-/* Isso força o slide a ser um container de coluna,
-   para o .slide-info-header e o .console-card ficarem
-   um em cima do outro. */
-.swiper-slide {
-  display: flex;
-  flex-direction: column;
-  height: auto; /* Permite que o slide cresça com o novo texto */
-}
-
-
-/* --- Estilos do Swiper (Setas e Bolinhas) --- */
-.swiper-button-next,
-.swiper-button-prev {
-  color: #282c34 !important;
-}
-
-.swiper-pagination-bullet-active {
-  background: #282c34 !important;
-}
+/* Swiper arrows/bullets com neon */
+.swiper-button-next, .swiper-button-prev{ color: var(--text) !important; }
+.swiper-button-next:hover, .swiper-button-prev:hover{ text-shadow: 0 0 14px rgba(0,196,154,.6); }
+.swiper-pagination-bullet{ opacity:.5; background: #6b7280 !important; }
+.swiper-pagination-bullet-active{ background: var(--primary) !important; opacity: 1; }

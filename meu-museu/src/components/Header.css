@@ -1,13 +1,23 @@
-/* src/components/Header.css */
-
-.app-header {
-  background-color: #282c34;
-  padding: 20px;
-  color: white;
-  text-align: center;
+.app-header{
+  position: sticky;
+  top:0;
+  z-index: 50;
+  background: radial-gradient(600px 200px at 10% 0%, rgba(0,196,154,.15), transparent 70%) , #0e1b2c;
+  border-bottom: 1px solid var(--border);
+  padding: 22px 16px;
+  text-align:center;
+  box-shadow: 0 6px 20px rgba(0,0,0,.35);
 }
 
-.header-link {
-  text-decoration: none;
-  color: white;
+.header-link{
+  text-decoration:none;
+  color: var(--text);
+  display:inline-block;
+  transform: translateZ(0);
+}
+.header-link h1{
+  margin:0;
+  font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+  letter-spacing: .5px;
+  text-shadow: 0 0 18px rgba(0,196,154,.35);
 }

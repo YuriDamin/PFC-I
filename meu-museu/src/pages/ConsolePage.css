@@ -1,48 +1,44 @@
-.console-page-layout {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  min-height: calc(100vh - 80px); /* 80px é uma altura aprox. do header */
+.console-page-layout{
+  display:flex; flex-direction: row; width:100%;
+  min-height: calc(100vh - 80px);
+  gap: 22px;
 }
 
-/* --- Painel da Esquerda (Detalhes) --- */
-.console-details-pane {
+.console-details-pane{
   flex-basis: 50%;
-  border-right: 2px solid #ddd;
-  padding: 25px;
-  background: #ffffff;
-  overflow-y: auto;
+  padding: 24px;
+  background: linear-gradient(180deg, rgba(28,43,64,.85), rgba(28,43,64,.6));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
-.console-image {
-  width: 100%;
-  max-width: 400px;
-  display: block;
-  margin: 15px auto;
-  border-radius: 8px;
-}
-.console-history {
-  line-height: 1.6;
+.console-details-pane h2{ margin-top: 4px; }
+
+.console-image{
+  width: 100%; max-width: 420px; display:block;
+  margin: 16px auto 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: #0c1a2b;
 }
 
-/* --- Painel da Direita (Jogos) --- */
-.game-list-pane {
+.console-history{ line-height: 1.7; color: var(--muted); }
+
+/* Lista de jogos */
+.game-list-pane{
   flex-basis: 50%;
-  padding: 25px;
-  background: #f9f9f9;
-  overflow-y: auto;
+  padding: 24px;
+  background: linear-gradient(180deg, rgba(28,43,64,.85), rgba(28,43,64,.6));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
-.game-list-pane h3 {
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 10px;
+.game-list-pane h3{
+  padding-bottom: 12px; margin: 0 0 12px;
+  border-bottom: 1px dashed rgba(255,255,255,.08);
 }
 
-/* --- Responsivo --- */
-@media (max-width: 768px) {
-  .console-page-layout {
-    flex-direction: column;
-  }
-  .console-details-pane {
-    border-right: none;
-    border-bottom: 2px solid #ddd;
-  }
+/* Responsivo */
+@media (max-width: 900px){
+  .console-page-layout{ flex-direction: column; }
 }

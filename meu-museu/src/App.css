@@ -1,24 +1,28 @@
-/* Remove a margem padrão do <main> */
-main {
-  display: block;
+main{
+  display:block;
+  padding: 24px 0 40px;
 }
 
-/* --- CLASSE GLOBAL DO BOTÃO VOLTAR --- */
-.link-voltar {
-  display: inline-block;
-  margin-bottom: 20px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: #007bff;
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
-  transition: background-color 0.2s;
+/* Botão global “voltar” com vibe gamer */
+.link-voltar{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:20px;
+  font-size:.95rem;
+  font-weight:700;
+  color: var(--text);
+  text-decoration:none;
+  padding:10px 14px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(180deg, rgba(28,43,64,.75), rgba(28,43,64,.55));
+  border:1px solid var(--border);
+  box-shadow: 0 2px 0 rgba(255,255,255,.04) inset, var(--shadow);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
 }
-
-.link-voltar:hover {
-  background-color: #e2e2e2;
-  text-decoration: underline;
+.link-voltar:hover{
+  transform: translateY(-1px);
+  border-color: rgba(0,196,154,.45);
+  box-shadow: var(--ring);
+  text-decoration:none;
 }

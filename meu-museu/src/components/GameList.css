@@ -1,6 +1,5 @@
 .game-list-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-  /* Removemos o padding daqui, será controlado pela página */
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }

@@ -1,29 +1,54 @@
-.game-card {
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s;
-  
-  /* Garante que o link se comporte como card */
-  text-decoration: none;
-  color: inherit;
-  display: block; /* Garante que o link ocupe o espaço */
+.game-card{
+  display:flex; align-items:center; gap:18px;
+  padding:12px 18px;
+  background: linear-gradient(180deg, rgba(28,43,64,.75), rgba(28,43,64,.5));
+  border:1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  text-decoration:none; color: var(--text);
+  transition: background .2s ease, transform .2s ease, border-color .2s ease;
 }
-.game-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+.game-card:hover{
+  transform: translateY(-2px);
+  border-color: rgba(0,196,154,.4);
+  background: linear-gradient(180deg, rgba(28,43,64,.85), rgba(28,43,64,.65));
 }
-.game-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+
+.game-card img{
+  width:90px; height:90px; object-fit:cover;
+  border-radius:8px; border:1px solid var(--border); background:#0c1a2b; flex-shrink:0;
 }
-.game-card-info {
-  padding: 15px;
+
+.game-card-info{ display:flex; flex-direction:column; flex:1; }
+.game-card-row{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
+
+.game-card-info h3{ margin:0; font-size:1.05rem; color:var(--text); }
+.game-card-info p{ margin:3px 0; font-size:.9rem; color:var(--muted); }
+.game-card-info p strong{ color: var(--primary); }
+
+/* -------- Badge de gênero -------- */
+.genre-badge{
+  --genre-color: #94A3B8; /* default */
+  border:1px solid var(--genre-color);
+  color: var(--genre-color);
+  background: rgba(255,255,255,.03);
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:.8rem; font-weight:800;
+  white-space: nowrap;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.15) inset;
 }
-.game-card-info h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
+
+/* Cores por gênero */
+.genre-rpg{ --genre-color:#a78bfa; }              /* violeta */
+.genre-plataforma{ --genre-color:#22c55e; }       /* verde */
+.genre-beatemup{ --genre-color:#f43f5e; }         /* rose */
+.genre-stealth{ --genre-color:#eab308; }          /* âmbar */
+.genre-fps{ --genre-color:#60a5fa; }              /* azul claro */
+.genre-openworld{ --genre-color:#06b6d4; }        /* ciano */
+.genre-metroidvania{ --genre-color:#8b5cf6; }     /* roxo */
+.genre-fantasy{ --genre-color:#c084fc; }          /* lilás */
+.genre-action-adventure{ --genre-color:#f59e0b; } /* laranja */
+.genre-action{ --genre-color:#ef4444; }           /* vermelho */
+.genre-adventure{ --genre-color:#38bdf8; }        /* azul */
+.genre-default{ --genre-color:#94A3B8; }          /* cinza */

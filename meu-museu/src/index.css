@@ -1,19 +1,49 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+:root{
+  --bg: #0F1C2E;
+  --bg-2: #11243a;
+  --card: #1C2B40cc; /* com alpha */
+  --card-solid: #1C2B40;
+  --border: #2E3C4F;
+  --text: #F1F5F9;
+  --muted: #94A3B8;
+  --primary: #00C49A;
+  --secondary: #007ACC;
+  --danger: #EF4444;
+  --success: #22C55E;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --radius: 14px;
+  --radius-sm: 10px;
+  --ring: 0 0 0 2px rgba(0,196,154,.25), 0 0 30px rgba(0,196,154,.18);
+}
+
+*{ box-sizing: border-box; }
+html, body, #root { height: 100%; }
+
+body{
+  margin:0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #e9e9e9; /* Um cinza claro de fundo */
+  color: var(--text);
+  background:
+    radial-gradient(1200px 800px at 10% -10%, #0b1a2c 10%, transparent 60%),
+    radial-gradient(900px 600px at 110% 10%, #0b2139 10%, transparent 60%),
+    linear-gradient(160deg, var(--bg), var(--bg-2));
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Links + foco acessível */
+a{ color: var(--primary); text-decoration: none; }
+a:hover{ text-decoration: underline; }
+:focus-visible{ outline: none; box-shadow: var(--ring); border-radius: 8px; }
+
+/* Utilitários */
+.container{ width:100%; max-width:1200px; padding:24px; margin:0 auto; }
+.glass{
+  background: var(--card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
-/* Melhora o layout de caixas */
-* {
-  box-sizing: border-box;
-}
+code{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace; }
