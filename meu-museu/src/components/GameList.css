@@ -1,3 +1,30 @@
+.game-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* --- Legenda de gêneros --- */
+.genre-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 4px 0 10px;
+}
+
+.genre-legend .genre-badge {
+  font-weight: 700;
+  opacity: 0.9;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.genre-legend .genre-badge:hover {
+  transform: translateY(-2px);
+  opacity: 1;
+  box-shadow: var(--ring);
+}
+
+/* --- Lista de jogos --- */
 .game-list-container {
   display: flex;
   flex-direction: column;
