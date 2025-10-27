@@ -4,24 +4,48 @@ import Header from './components/Header';
 import HomePage from './pages/HomePage';
 import ConsolePage from './pages/ConsolePage';
 import GamePage from './pages/GamePage';
+import LoginPage from './pages/LoginPage';
+import { AuthProvider } from './context/AuthContext';
+import ProtectedRoute from './components/ProtectedRoute';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <main>
-        <Routes>
-          {/* Nível 1: Home com seleção de consoles */}
-          <Route path="/" element={<HomePage />} />
-          
-          {/* Nível 2: Página do console (detalhes + lista de jogos) */}
-          <Route path="/console/:consoleId" element={<ConsolePage />} />
-          
-          {/* Nível 3: Página do Jogo (detalhes, galeria, dicas) */}
-          <Route path="/console/:consoleId/:gameId" element={<GamePage />} />
-        </Routes>
-      </main>
+      <AuthProvider>
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/login" element={<LoginPage />} />
+
+            {/* Rotas protegidas */}
+            <Route
+              path="/"
+              element={
+                <ProtectedRoute>
+                  <HomePage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/console/:consoleId"
+              element={
+                <ProtectedRoute>
+                  <ConsolePage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/console/:consoleId/:gameId"
+              element={
+                <ProtectedRoute>
+                  <GamePage />
+                </ProtectedRoute>
+              }
+            />
+          </Routes>
+        </main>
+      </AuthProvider>
     </div>
   );
 }
