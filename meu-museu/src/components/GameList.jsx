@@ -12,7 +12,7 @@ function mapGenreToKey(genero) {
   if (g.includes('mundo aberto')) return 'openworld';
   if (g.includes('metroidvania')) return 'metroidvania';
   if (g.includes('fantasia')) return 'fantasy';
-  if (g.includes('corrida') || g.includes('racing')) return 'racing'; // 🆕 Corrida
+  if (g.includes('corrida') || g.includes('racing')) return 'racing';
   if (g.includes('ação') && g.includes('aventura')) return 'action-adventure';
   if (g.includes('ação')) return 'action';
   if (g.includes('aventura')) return 'adventure';
@@ -31,13 +31,14 @@ const genreColors = [
   { name: 'Mundo Aberto', key: 'openworld', class: 'genre-openworld' },
   { name: 'Metroidvania', key: 'metroidvania', class: 'genre-metroidvania' },
   { name: 'Fantasia', key: 'fantasy', class: 'genre-fantasy' },
-  { name: 'Corrida', key: 'racing', class: 'genre-racing' }, // 🆕 Corrida
+  { name: 'Corrida', key: 'racing', class: 'genre-racing' },
   { name: 'Ação/Aventura', key: 'action-adventure', class: 'genre-action-adventure' },
 ];
 
 function GameList({ jogos, consoleId }) {
   const [active, setActive] = useState(new Set());
   const [showFilters, setShowFilters] = useState(false);
+  const [searchTerm, setSearchTerm] = useState(''); // 🆕 novo estado
 
   function toggle(key) {
     if (key === 'all') {
@@ -51,12 +52,33 @@ function GameList({ jogos, consoleId }) {
   }
 
   const filtered = useMemo(() => {
-    if (active.size === 0) return jogos;
-    return jogos.filter(j => active.has(mapGenreToKey(j.genero)));
-  }, [jogos, active]);
+    let result = jogos;
+
+    // filtro de gênero
+    if (active.size > 0) {
+      result = result.filter(j => active.has(mapGenreToKey(j.genero)));
+    }
+
+    // filtro de pesquisa
+    if (searchTerm.trim() !== '') {
+      const term = searchTerm.toLowerCase();
+      result = result.filter(j => j.titulo.toLowerCase().includes(term));
+    }
+
+    return result;
+  }, [jogos, active, searchTerm]);
 
   return (
     <div className="game-list-wrapper">
+      {/* --- BARRA DE PESQUISA --- */}
+      <input
+        type="text"
+        className="search-bar"
+        placeholder="🔍 Pesquise um jogo..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+
       {/* --- BOTÃO COM SETA ANIMADA --- */}
       <button
         className={`toggle-filters-btn ${showFilters ? 'open' : ''}`}
@@ -88,13 +110,13 @@ function GameList({ jogos, consoleId }) {
       </div>
 
       <div className="genre-feedback">
-        {active.size === 0
+        {active.size === 0 && searchTerm === ''
           ? 'Mostrando todos os jogos'
-          : `Filtrando por: ${[...active].join(', ')} — ${filtered.length} jogo(s)`}
+          : `Filtrando ${searchTerm ? `por "${searchTerm}"` : ''} ${active.size > 0 ? `e gênero: ${[...active].join(', ')}` : ''} — ${filtered.length} jogo(s)`}
       </div>
 
       {filtered.length === 0 ? (
-        <div className="empty-list">Nenhum jogo encontrado para o filtro selecionado.</div>
+        <div className="empty-list">Nenhum jogo encontrado.</div>
       ) : (
         <div className="game-list-container">
           {filtered.map((jogo) => (
