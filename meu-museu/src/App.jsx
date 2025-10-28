@@ -6,6 +6,7 @@ import ConsolePage from './pages/ConsolePage';
 import GamePage from './pages/GamePage';
 import LoginPage from './pages/LoginPage';
 import { AuthProvider } from './context/AuthContext';
+import { XPProvider } from './context/XPContext'; // 🧩 importação adicionada
 import ProtectedRoute from './components/ProtectedRoute';
 import './App.css';
 
@@ -13,38 +14,40 @@ function App() {
   return (
     <div className="App">
       <AuthProvider>
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/login" element={<LoginPage />} />
+        <XPProvider>
+          <Header />
+          <main>
+            <Routes>
+              <Route path="/login" element={<LoginPage />} />
 
-            {/* Rotas protegidas */}
-            <Route
-              path="/"
-              element={
-                <ProtectedRoute>
-                  <HomePage />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/console/:consoleId"
-              element={
-                <ProtectedRoute>
-                  <ConsolePage />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/console/:consoleId/:gameId"
-              element={
-                <ProtectedRoute>
-                  <GamePage />
-                </ProtectedRoute>
-              }
-            />
-          </Routes>
-        </main>
+              {/* Rotas protegidas */}
+              <Route
+                path="/"
+                element={
+                  <ProtectedRoute>
+                    <HomePage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/console/:consoleId"
+                element={
+                  <ProtectedRoute>
+                    <ConsolePage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/console/:consoleId/:gameId"
+                element={
+                  <ProtectedRoute>
+                    <GamePage />
+                  </ProtectedRoute>
+                }
+              />
+            </Routes>
+          </main>
+        </XPProvider>
       </AuthProvider>
     </div>
   );

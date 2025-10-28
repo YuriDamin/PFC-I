@@ -1,13 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getConsoleById, getGameById } from '../dados/museuDados';
+import { useXP } from '../context/XPContext';
 import './GamePage.css';
 
 function GamePage() {
   const { consoleId, gameId } = useParams();
-  
   const console = getConsoleById(consoleId);
   const jogo = getGameById(consoleId, gameId);
+  const { addXP } = useXP();
+
+  useEffect(() => {
+    // 🧩 Adiciona XP apenas uma vez por jogo por sessão
+    if (jogo) {
+      const xpKey = `xp_given_${consoleId}_${gameId}`;
+      const alreadyGiven = sessionStorage.getItem(xpKey);
+
+      if (!alreadyGiven) {
+        addXP(10);
+        sessionStorage.setItem(xpKey, 'true');
+      }
+    }
+  }, [consoleId, gameId, jogo, addXP]);
 
   if (!console || !jogo) {
     return (
@@ -20,13 +34,16 @@ function GamePage() {
 
   return (
     <div className="game-page-container">
-      {/* Botão para voltar para a tela DO CONSOLE */}
       <Link to={`/console/${consoleId}`} className="link-voltar">
         &larr; Voltar para {console.nome}
       </Link>
 
       <div className="game-header">
-        <img src={jogo.imagem_url} alt={jogo.titulo} className="game-main-image" />
+        <img
+          src={jogo.imagem_url}
+          alt={jogo.titulo}
+          className="game-main-image"
+        />
         <div className="game-header-info">
           <h1>{jogo.titulo}</h1>
           <p><strong>Plataforma:</strong> {console.nome}</p>
@@ -54,7 +71,6 @@ function GamePage() {
           ))}
         </ul>
       </div>
-
     </div>
   );
 }
