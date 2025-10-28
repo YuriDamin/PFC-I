@@ -40,15 +40,16 @@
 }
 
 /* Cores por gênero */
-.genre-rpg{ --genre-color:#a78bfa; }              /* violeta */
-.genre-plataforma{ --genre-color:#22c55e; }       /* verde */
-.genre-beatemup{ --genre-color:#f43f5e; }         /* rose */
-.genre-stealth{ --genre-color:#eab308; }          /* âmbar */
-.genre-fps{ --genre-color:#60a5fa; }              /* azul claro */
-.genre-openworld{ --genre-color:#06b6d4; }        /* ciano */
-.genre-metroidvania{ --genre-color:#8b5cf6; }     /* roxo */
-.genre-fantasy{ --genre-color:#c084fc; }          /* lilás */
-.genre-action-adventure{ --genre-color:#f59e0b; } /* laranja */
-.genre-action{ --genre-color:#ef4444; }           /* vermelho */
-.genre-adventure{ --genre-color:#38bdf8; }        /* azul */
-.genre-default{ --genre-color:#94A3B8; }          /* cinza */
+.genre-rpg{ --genre-color:#a78bfa; }
+.genre-plataforma{ --genre-color:#22c55e; }
+.genre-beatemup{ --genre-color:#f43f5e; }
+.genre-stealth{ --genre-color:#eab308; }
+.genre-fps{ --genre-color:#60a5fa; }
+.genre-openworld{ --genre-color:#06b6d4; }
+.genre-metroidvania{ --genre-color:#8b5cf6; }
+.genre-fantasy{ --genre-color:#c084fc; }
+.genre-action-adventure{ --genre-color:#f59e0b; }
+.genre-action{ --genre-color:#ef4444; }
+.genre-adventure{ --genre-color:#38bdf8; }
+.genre-default{ --genre-color:#94A3B8; }
+.genre-racing{ --genre-color:#f97316; } /* Laranja esportivo */

@@ -13,6 +13,7 @@ function mapGenreToClass(genero) {
   if (g.includes('mundo aberto')) return 'genre-openworld';
   if (g.includes('metroidvania')) return 'genre-metroidvania';
   if (g.includes('fantasia')) return 'genre-fantasy';
+  if (g.includes('corrida') || g.includes('racing')) return 'genre-racing'; // 🆕 Corrida
   if (g.includes('ação') && g.includes('aventura')) return 'genre-action-adventure';
   if (g.includes('ação')) return 'genre-action';
   if (g.includes('aventura')) return 'genre-adventure';

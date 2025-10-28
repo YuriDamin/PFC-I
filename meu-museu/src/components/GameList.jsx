@@ -12,6 +12,7 @@ function mapGenreToKey(genero) {
   if (g.includes('mundo aberto')) return 'openworld';
   if (g.includes('metroidvania')) return 'metroidvania';
   if (g.includes('fantasia')) return 'fantasy';
+  if (g.includes('corrida') || g.includes('racing')) return 'racing'; // 🆕 Corrida
   if (g.includes('ação') && g.includes('aventura')) return 'action-adventure';
   if (g.includes('ação')) return 'action';
   if (g.includes('aventura')) return 'adventure';
@@ -30,6 +31,7 @@ const genreColors = [
   { name: 'Mundo Aberto', key: 'openworld', class: 'genre-openworld' },
   { name: 'Metroidvania', key: 'metroidvania', class: 'genre-metroidvania' },
   { name: 'Fantasia', key: 'fantasy', class: 'genre-fantasy' },
+  { name: 'Corrida', key: 'racing', class: 'genre-racing' }, // 🆕 Corrida
   { name: 'Ação/Aventura', key: 'action-adventure', class: 'genre-action-adventure' },
 ];
 
