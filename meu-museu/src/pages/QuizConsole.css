@@ -91,3 +91,11 @@
   transform: translateY(-2px);
   box-shadow: var(--ring);
 }
+
+.quiz-console-container .quiz-voltar-btn {
+  margin-top: 0;
+}
+
+.quiz-console-container button.quiz-voltar-btn {
+  cursor: pointer;
+}
