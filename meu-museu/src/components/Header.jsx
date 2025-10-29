@@ -1,53 +1,47 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useRef } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useXP } from '../context/XPContext';
 import './Header.css';
 
 function Header() {
   const { user, logout } = useAuth();
-  const { level, progress } = useXP();
-  const isVisitor = user?.email === 'visitante@museu.com';
+  const { level, xp, progress } = useXP();
+  const barRef = useRef(null);
+
+  useEffect(() => {
+    if (barRef.current) {
+      barRef.current.style.width = `${progress * 100}%`;
+    }
+  }, [progress]);
 
   return (
-    <header className="app-header">
-      <Link to="/" className="header-link">
-        <h1>Museu Digital de Jogos Clássicos</h1>
-      </Link>
+    <header className="header">
+      <h1 className="logo">🎮 Museu dos Consoles</h1>
 
-      <div className="header-actions">
-        {/* 🧩 Nível do Jogador */}
-        <div className="xp-bar-container" title={`Nível ${level}`}>
-          <span className="xp-label">Nível {level}</span>
+      <div className="user-section">
+        {user && (
+          <div className="user-info">
+            <p>
+              👤 <strong>{user.email}</strong>
+              {user.isVisitor && <span className="visitor-badge">Visitante</span>}
+            </p>
+          </div>
+        )}
+
+        <div className="xp-container">
+          <div className="xp-info">
+            <span>Nível {level}</span>
+            <span>{xp} XP</span>
+          </div>
           <div className="xp-bar">
-            <div
-              className="xp-progress"
-              style={{ width: `${progress * 100}%` }}
-            ></div>
+            <div ref={barRef} className="xp-bar-fill" />
           </div>
         </div>
 
-        {user ? (
-          <>
-            {isVisitor && (
-              <div
-                className="visitor-badge"
-                title="Modo Visitante — acesso de exploração"
-              >
-                👾 Visitante
-              </div>
-            )}
-
-            {!isVisitor && <span className="user-email">{user.email}</span>}
-
-            <button className="logout-btn" onClick={logout}>
-              Sair
-            </button>
-          </>
-        ) : (
-          <Link to="/login">
-            <button className="login-btn">Entrar</button>
-          </Link>
+        {user && (
+          <button className="logout-btn" onClick={logout}>
+            🚪 Sair
+          </button>
         )}
       </div>
     </header>

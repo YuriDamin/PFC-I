@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getConsoleById, getGameById } from '../dados/museuDados';
 import { useXP } from '../context/XPContext';
+import Toast from '../components/Toast';
 import './GamePage.css';
 
 function GamePage() {
@@ -9,15 +10,20 @@ function GamePage() {
   const console = getConsoleById(consoleId);
   const jogo = getGameById(consoleId, gameId);
   const { addXP } = useXP();
+  const [toast, setToast] = useState(null);
 
   useEffect(() => {
-    // 🧩 Adiciona XP apenas uma vez por jogo por sessão
     if (jogo) {
       const xpKey = `xp_given_${consoleId}_${gameId}`;
       const alreadyGiven = sessionStorage.getItem(xpKey);
 
       if (!alreadyGiven) {
         addXP(10);
+        setToast({
+          message: `✨ +10 XP! Você explorou "${jogo.titulo}".`,
+          type: 'success',
+        });
+
         sessionStorage.setItem(xpKey, 'true');
       }
     }
@@ -71,6 +77,14 @@ function GamePage() {
           ))}
         </ul>
       </div>
+
+      {toast && (
+        <Toast
+          message={toast.message}
+          type={toast.type}
+          onClose={() => setToast(null)}
+        />
+      )}
     </div>
   );
 }
