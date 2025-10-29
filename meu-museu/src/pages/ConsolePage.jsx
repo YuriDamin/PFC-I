@@ -19,25 +19,29 @@ function ConsolePage() {
 
   return (
     <div className="console-page-layout">
-      
+      {/* Painel esquerdo com infos do console */}
       <div className="console-details-pane">
-        {/* Botão de voltar global */}
         <Link to="/" className="link-voltar">
           &larr; Voltar para a seleção de consoles
         </Link>
 
         <h2>{console.nome}</h2>
+
+        {/* ?? Botão para o quiz */}
+        <Link to={`/console/${consoleId}/quiz`} className="quiz-link-btn">
+          ?? Fazer Quiz do {console.nome}
+        </Link>
+
         <img src={console.imagem_url} alt={console.nome} className="console-image" />
         <p><strong>Ano de Lançamento:</strong> {console.ano}</p>
         <p className="console-history">{console.historia}</p>
       </div>
 
+      {/* Painel direito com os jogos */}
       <div className="game-list-pane">
         <h3>Catálogo de Jogos</h3>
-        {/* Passa o ID do console para o GameList */}
         <GameList jogos={console.jogos} consoleId={console.id} />
       </div>
-
     </div>
   );
 }

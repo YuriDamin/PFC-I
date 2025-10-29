@@ -1,5 +1,3 @@
-// --- BASE DE DADOS DO MUSEU DIGITAL RETROGAMES ---
-// Substitua as URLs se preferir usar imagens locais (ex: '/imagens/megadrive.jpg')
 
 export const consoles = [
   {
@@ -8,7 +6,7 @@ export const consoles = [
     ano: 1985,
     geracao: "3ª Geração",
     fabricante: "Nintendo",
-    imagem_url: "/imagens/snes/supermariobros3.png",
+    imagem_url: "/imagens/nes_console.png",
     historia: "O NES (ou 'Nintendinho') é um console de 8-bits que revitalizou a indústria de videogames após o 'crash' de 1983. Ele introduziu franquias icônicas como Super Mario Bros. e The Legend of Zelda.",
     jogos: [
       {
@@ -25,10 +23,13 @@ export const consoles = [
             "https://upload.wikimedia.org/wikipedia/pt/c/c5/Smb3_world_1_map.png",
             "https://upload.wikimedia.org/wikipedia/pt/7/7d/SMB3_gameplay.png"
           ],
+
           dicas: [
             "Use as Flautas Mágicas para pular mundos.",
             "O P-Wing permite voar o nível inteiro."
           ]
+
+          
         }
       },
       {
@@ -354,7 +355,25 @@ export const consoles = [
           ]
         }
       }
-    ]
+    ],
+
+    quiz: [
+      {
+        q: 'Em que ano o NES foi lançado?',
+        op: ['1981', '1983', '1985'],
+        r: '1983',
+      },
+      {
+        q: 'Qual desses jogos foi um dos primeiros sucessos do NES?',
+        op: ['Crash Bandicoot', 'Super Mario Bros', 'Donkey Kong Country'],
+        r: 'Super Mario Bros',
+      },
+      {
+        q: 'O NES popularizou o uso de qual tipo de controle?',
+        op: ['Analógico', 'D-Pad (cruz direcional)', 'Touchscreen'],
+        r: 'D-Pad (cruz direcional)',
+      },
+    ],
   },
 
   {

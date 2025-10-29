@@ -42,3 +42,23 @@
 @media (max-width: 900px){
   .console-page-layout{ flex-direction: column; }
 }
+
+.quiz-link-btn {
+  display: inline-block;
+  margin: 10px 0 20px;
+  background: rgba(0,196,154,0.15);
+  border: 1px solid rgba(0,196,154,0.5);
+  color: var(--primary);
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.quiz-link-btn:hover {
+  background: rgba(0,196,154,0.3);
+  box-shadow: var(--ring);
+  transform: translateY(-2px);
+}
+
