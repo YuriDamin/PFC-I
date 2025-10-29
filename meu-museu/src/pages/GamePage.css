@@ -75,3 +75,32 @@
     margin-bottom: 20px;
   }
 }
+
+/* === Botão de Favorito === */
+.favorite-btn {
+  background: rgba(0, 196, 154, 0.1);
+  border: 1px solid var(--border);
+  color: var(--primary);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 6px 0 10px;
+  transition: all 0.25s ease;
+}
+
+.favorite-btn:hover {
+  background: rgba(0, 196, 154, 0.2);
+  box-shadow: var(--ring);
+  transform: translateY(-2px);
+}
+
+.favorite-btn.active {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border-color: rgba(239, 68, 68, 0.4);
+}
+.favorite-btn.active:hover {
+  background: rgba(239, 68, 68, 0.25);
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
+}

@@ -4,11 +4,14 @@ import Header from './components/Header';
 import HomePage from './pages/HomePage';
 import ConsolePage from './pages/ConsolePage';
 import GamePage from './pages/GamePage';
-import QuizConsole from './pages/QuizConsole'; // ?? Novo
 import LoginPage from './pages/LoginPage';
+import FavoritesPage from './pages/FavoritesPage'; // 🆕 nova página
+
 import { AuthProvider } from './context/AuthContext';
 import { XPProvider } from './context/XPContext';
+import { FavoritesProvider } from './context/FavoritesContext'; // 🆕 novo contexto
 import ProtectedRoute from './components/ProtectedRoute';
+
 import './App.css';
 
 function App() {
@@ -21,51 +24,55 @@ function App() {
     <div className="App">
       <AuthProvider>
         <XPProvider>
-          {!hideHeader && <Header />}
-          <main>
-            <Routes>
-              {/* Login */}
-              <Route path="/login" element={<LoginPage />} />
+          <FavoritesProvider>
+            {!hideHeader && <Header />}
+            <main>
+              <Routes>
+                {/* 🔑 Login */}
+                <Route path="/login" element={<LoginPage />} />
 
-              {/* ?? Rotas protegidas */}
-              <Route
-                path="/"
-                element={
-                  <ProtectedRoute>
-                    <HomePage />
-                  </ProtectedRoute>
-                }
-              />
+                {/* 🏠 Home protegida */}
+                <Route
+                  path="/"
+                  element={
+                    <ProtectedRoute>
+                      <HomePage />
+                    </ProtectedRoute>
+                  }
+                />
 
-              <Route
-                path="/console/:consoleId"
-                element={
-                  <ProtectedRoute>
-                    <ConsolePage />
-                  </ProtectedRoute>
-                }
-              />
+                {/* 🎮 Página do console */}
+                <Route
+                  path="/console/:consoleId"
+                  element={
+                    <ProtectedRoute>
+                      <ConsolePage />
+                    </ProtectedRoute>
+                  }
+                />
 
-              <Route
-                path="/console/:consoleId/:gameId"
-                element={
-                  <ProtectedRoute>
-                    <GamePage />
-                  </ProtectedRoute>
-                }
-              />
+                {/* 🕹️ Página do jogo */}
+                <Route
+                  path="/console/:consoleId/:gameId"
+                  element={
+                    <ProtectedRoute>
+                      <GamePage />
+                    </ProtectedRoute>
+                  }
+                />
 
-              {/* ?? Quiz de cada console */}
-              <Route
-                path="/console/:consoleId/quiz"
-                element={
-                  <ProtectedRoute>
-                    <QuizConsole />
-                  </ProtectedRoute>
-                }
-              />
-            </Routes>
-          </main>
+                {/* 📚 Biblioteca (Favoritos) */}
+                <Route
+                  path="/biblioteca"
+                  element={
+                    <ProtectedRoute>
+                      <FavoritesPage />
+                    </ProtectedRoute>
+                  }
+                />
+              </Routes>
+            </main>
+          </FavoritesProvider>
         </XPProvider>
       </AuthProvider>
     </div>

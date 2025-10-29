@@ -6,7 +6,7 @@ export const consoles = [
     ano: 1985,
     geracao: "3ª Geração",
     fabricante: "Nintendo",
-    imagem_url: "/imagens/nes_console.png",
+    imagem_url: "https://commons.wikimedia.org/wiki/File:Wikipedia_NES_PAL.jpg#/media/File:Wikipedia_NES_PAL.jpg",
     historia: "O NES (ou 'Nintendinho') é um console de 8-bits que revitalizou a indústria de videogames após o 'crash' de 1983. Ele introduziu franquias icônicas como Super Mario Bros. e The Legend of Zelda.",
     jogos: [
       {

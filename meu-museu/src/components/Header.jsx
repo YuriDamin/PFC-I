@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useXP } from '../context/XPContext';
 import './Header.css';
@@ -28,6 +29,7 @@ function Header() {
           </div>
         )}
 
+        {/* --- XP e Nível --- */}
         <div className="xp-container">
           <div className="xp-info">
             <span>Nível {level}</span>
@@ -38,11 +40,18 @@ function Header() {
           </div>
         </div>
 
-        {user && (
-          <button className="logout-btn" onClick={logout}>
-            🚪 Sair
-          </button>
-        )}
+        {/* --- Navegação adicional --- */}
+        <div style={{ display: 'flex', gap: '10px' }}>
+          <Link to="/biblioteca" className="logout-btn">
+            📚 Biblioteca
+          </Link>
+
+          {user && (
+            <button className="logout-btn" onClick={logout}>
+              🚪 Sair
+            </button>
+          )}
+        </div>
       </div>
     </header>
   );
