@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { getConsoleById } from "../dados/museuDados";
 import { useXP } from "../context/XPContext";
+import { useAchievements } from "../context/AchievementsContext"; // 🏅 Novo contexto
 import Toast from "../components/Toast";
 import "./QuizConsole.css";
 
@@ -11,6 +12,7 @@ import wrongSound from "../assets/sounds/wrong.mp3";
 function QuizConsole() {
   const { consoleId } = useParams();
   const { addXP } = useXP();
+  const { unlock } = useAchievements(); // 🏅 Novo
   const navigate = useNavigate();
   const consoleData = getConsoleById(consoleId);
 
@@ -89,6 +91,13 @@ function QuizConsole() {
     }
   };
 
+  // 🏅 Quando o quiz termina, concede a insígnia
+  useEffect(() => {
+    if (finalizado && quiz.length > 0) {
+      unlock(`quiz_${consoleId}`, `Completou o quiz do ${consoleData.nome}`);
+    }
+  }, [finalizado, consoleId, consoleData, quiz.length, unlock]);
+
   return (
     <div className="quiz-console-container">
       {/* 🔊 Sons */}
@@ -144,11 +153,22 @@ function QuizConsole() {
               💪 Bom trabalho! Que tal tentar de novo?
             </p>
           ) : (
-            <p className="quiz-premio">🎮 Continue praticando!</p>
+            <p className="quiz-premio">
+              🎮 Continue praticando e tente novamente!
+            </p>
           )}
+
+          <Link
+            to={`/console/${consoleId}`}
+            className="quiz-voltar-btn"
+            style={{ marginTop: "20px" }}
+          >
+            ⬅️ Voltar ao Console
+          </Link>
         </div>
       )}
 
+      {/* 🔔 Toast */}
       {toast && (
         <Toast
           message={toast.message}

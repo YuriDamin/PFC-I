@@ -52,3 +52,38 @@
   transform: translateY(20px);
   transition: all 0.5s ease;
 }
+
+/* === Destaque para o botão de Insígnias === */
+.logout-btn[href="/insignias"] {
+  position: relative;
+  font-weight: 700;
+  color: #00c49a;
+  border-color: rgba(0, 196, 154, 0.3);
+  box-shadow: 0 0 6px rgba(0, 196, 154, 0.25);
+  transition: all 0.25s ease;
+}
+
+/* Efeito de brilho pulsante */
+.logout-btn[href="/insignias"]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 196, 154, 0.5);
+  opacity: 0.4;
+  animation: glow-pulse 1.8s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.4; box-shadow: 0 0 10px rgba(0,196,154,0.5); }
+  50% { opacity: 0.9; box-shadow: 0 0 18px rgba(0,196,154,0.7); }
+}
+
+/* Hover ainda mais destacado */
+.logout-btn[href="/insignias"]:hover {
+  background: rgba(0,196,154,0.2);
+  color: #00e0b0;
+  transform: translateY(-1px);
+  box-shadow: 0 0 10px rgba(0,196,154,0.45);
+}

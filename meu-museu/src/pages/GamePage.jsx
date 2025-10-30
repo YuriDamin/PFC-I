@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { getConsoleById, getGameById } from '../dados/museuDados';
 import { useXP } from '../context/XPContext';
 import { useFavorites } from '../context/FavoritesContext';
+import { useAchievements } from '../context/AchievementsContext'; // 🏅 Novo
 import Toast from '../components/Toast';
 import './GamePage.css';
 
@@ -12,9 +13,11 @@ function GamePage() {
   const jogo = getGameById(consoleId, gameId);
   const { addXP } = useXP();
   const { isFavorite, toggleFavorite } = useFavorites();
+  const { unlock } = useAchievements(); // 🏅 Novo
 
   const [toast, setToast] = useState(null);
 
+  // 🎮 Ganha XP ao abrir o jogo pela primeira vez
   useEffect(() => {
     if (jogo) {
       const xpKey = `xp_given_${consoleId}_${gameId}`;
@@ -31,6 +34,25 @@ function GamePage() {
       }
     }
   }, [consoleId, gameId, jogo, addXP]);
+
+  // 🏅 Contabiliza jogos explorados e libera insígnias
+  useEffect(() => {
+    if (jogo && console) {
+      const key = `games_${consoleId}`;
+      const count = parseInt(localStorage.getItem(key) || '0', 10) + 1;
+      localStorage.setItem(key, count);
+
+if (count === 5) {
+  unlock(`${key}_5`, `Explorou 5 jogos do ${console.nome}`);
+}
+if (count === 10) {
+  unlock(`${key}_10`, `Explorou 10 jogos do ${console.nome}`);
+}
+if (count === 15) {
+  unlock(`${key}_15`, `Explorou 15 jogos do ${console.nome}`);
+}
+    }
+  }, [consoleId, jogo, console, unlock]);
 
   if (!console || !jogo) {
     return (

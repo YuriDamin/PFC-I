@@ -52,6 +52,7 @@ function Header() {
           </div>
         )}
 
+        {/* === Barra de XP === */}
         <div className="xp-container">
           <div className="xp-info">
             <span>Nível {level}</span>
@@ -62,10 +63,17 @@ function Header() {
           </div>
         </div>
 
+        {/* === Ações do cabeçalho === */}
         <div className="header-actions">
           <Link to="/biblioteca" className="logout-btn">
             📚 Biblioteca
           </Link>
+
+          {/* 🏅 Novo botão de Insígnias */}
+          <Link to="/insignias" className="logout-btn">
+            🏅 Insígnias
+          </Link>
+
           {user && (
             <button className="logout-btn" onClick={logout}>
               🚪 Sair
