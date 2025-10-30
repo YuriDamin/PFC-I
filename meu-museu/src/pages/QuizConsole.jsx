@@ -8,7 +8,6 @@ import "./QuizConsole.css";
 import correctSound from "../assets/sounds/correct.mp3";
 import wrongSound from "../assets/sounds/wrong.mp3";
 
-
 function QuizConsole() {
   const { consoleId } = useParams();
   const { addXP } = useXP();
@@ -55,14 +54,26 @@ function QuizConsole() {
   const responder = (opcao) => {
     if (finalizado) return;
 
+    const questaoKey = `quiz_${consoleId}_q${indice}`;
+
     if (opcao === perguntaAtual.r) {
       setAcertos((prev) => prev + 1);
-      addXP(20);
-      setToast({ message: "✅ Resposta correta! +20 XP!", type: "success" });
-      audioCorrect.current.play(); // 🔊 som de acerto
+      audioCorrect.current.play();
+
+      // ✅ Só ganha XP se ainda não acertou esta questão antes
+      if (localStorage.getItem(questaoKey) !== "true") {
+        addXP(20);
+        localStorage.setItem(questaoKey, "true");
+        setToast({ message: "✅ Resposta correta! +20 XP!", type: "success" });
+      } else {
+        setToast({
+          message: "ℹ️ Você já ganhou XP por esta questão.",
+          type: "info",
+        });
+      }
     } else {
+      audioWrong.current.play();
       setToast({ message: "❌ Errou! Tente a próxima!", type: "error" });
-      audioWrong.current.play(); // 🔊 som de erro
     }
 
     if (indice + 1 < quiz.length) {
@@ -80,11 +91,11 @@ function QuizConsole() {
 
   return (
     <div className="quiz-console-container">
-      {/* --- Áudios carregados --- */}
+      {/* 🔊 Sons */}
       <audio ref={audioCorrect} src={correctSound} preload="auto" />
       <audio ref={audioWrong} src={wrongSound} preload="auto" />
 
-      {/* --- Botões de navegação --- */}
+      {/* 🔙 Navegação */}
       <div
         style={{
           display: "flex",
@@ -135,19 +146,6 @@ function QuizConsole() {
           ) : (
             <p className="quiz-premio">🎮 Continue praticando!</p>
           )}
-
-          <div style={{ marginTop: "20px" }}>
-            <Link to={`/console/${consoleId}`} className="quiz-voltar-btn">
-              ⬅️ Voltar ao Console
-            </Link>
-            <Link
-              to="/"
-              className="quiz-voltar-btn"
-              style={{ marginLeft: "10px" }}
-            >
-              🏠 Menu Principal
-            </Link>
-          </div>
         </div>
       )}
 
