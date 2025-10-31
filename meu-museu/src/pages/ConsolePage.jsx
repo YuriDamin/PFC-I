@@ -29,8 +29,7 @@ function ConsolePage() {
 
         {/* ?? Botão para o quiz */}
         <Link to={`/console/${consoleId}/quiz`} className="quiz-link-btn">
-          ?? Fazer Quiz do {console.nome}
-        </Link>
+🧠 Fazer Quiz do {console.nome}        </Link>
 
         <img src={console.imagem_url} alt={console.nome} className="console-image" />
         <p><strong>Ano de Lançamento:</strong> {console.ano}</p>

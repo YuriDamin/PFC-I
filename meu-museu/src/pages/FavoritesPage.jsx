@@ -9,8 +9,8 @@ import {
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import { useFavorites } from "../context/FavoritesContext";
+import { useXP } from "../context/XPContext";
 import "./LibraryShelf.css";
-import "../components/GameList.css";
 
 /* === Função auxiliar para gêneros === */
 function mapGenreToKey(genero) {
@@ -30,23 +30,7 @@ function mapGenreToKey(genero) {
   return "default";
 }
 
-const genreColors = [
-  { name: "Todos", key: "all", class: "genre-default" },
-  { name: "Ação", key: "action", class: "genre-action" },
-  { name: "Aventura", key: "adventure", class: "genre-adventure" },
-  { name: "RPG", key: "rpg", class: "genre-rpg" },
-  { name: "Plataforma", key: "plataforma", class: "genre-plataforma" },
-  { name: "Beat 'em up", key: "beatemup", class: "genre-beatemup" },
-  { name: "Stealth", key: "stealth", class: "genre-stealth" },
-  { name: "FPS", key: "fps", class: "genre-fps" },
-  { name: "Mundo Aberto", key: "openworld", class: "genre-openworld" },
-  { name: "Metroidvania", key: "metroidvania", class: "genre-metroidvania" },
-  { name: "Fantasia", key: "fantasy", class: "genre-fantasy" },
-  { name: "Corrida", key: "racing", class: "genre-racing" },
-  { name: "Ação/Aventura", key: "action-adventure", class: "genre-action-adventure" },
-];
-
-/* === Componente Sortable para cada livro === */
+/* === Livro arrastável === */
 function SortableBook({ jogo }) {
   const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id: jogo.id });
   const style = {
@@ -56,13 +40,11 @@ function SortableBook({ jogo }) {
 
   return (
     <div ref={setNodeRef} style={style} {...attributes} {...listeners} className="book draggable">
-      <div className="book-spine">
-        <span className="book-title">{jogo.titulo}</span>
-      </div>
       <div className="book-cover">
+        <span className={`genre-tag ${mapGenreToKey(jogo.genero)}`}>{jogo.genero}</span>
         <img src={jogo.imagem_url} alt={jogo.titulo} />
         <div className="book-info">
-          <p>{jogo.genero}</p>
+          <p>{jogo.titulo}</p>
           <Link to={`/console/${jogo.consoleId}/${jogo.id}`} className="open-btn">
             Abrir
           </Link>
@@ -75,12 +57,12 @@ function SortableBook({ jogo }) {
 /* === Página principal === */
 function FavoritesPage() {
   const { favorites } = useFavorites();
+  const { xp } = useXP();
   const [ordered, setOrdered] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [activeGenres, setActiveGenres] = useState(new Set());
   const [showFilters, setShowFilters] = useState(false);
 
-  /* Carrega ordem salva */
   useEffect(() => {
     const saved = JSON.parse(localStorage.getItem("libraryOrder") || "[]");
     if (saved.length > 0) {
@@ -94,19 +76,13 @@ function FavoritesPage() {
     }
   }, [favorites]);
 
-  /* Salva ordem */
   useEffect(() => {
     if (ordered.length > 0) {
       localStorage.setItem("libraryOrder", JSON.stringify(ordered.map((f) => f.id)));
     }
   }, [ordered]);
 
-  /* Filtros */
   const toggleGenre = (key) => {
-    if (key === "all") {
-      setActiveGenres(new Set());
-      return;
-    }
     const next = new Set(activeGenres);
     next.has(key) ? next.delete(key) : next.add(key);
     setActiveGenres(next);
@@ -124,16 +100,6 @@ function FavoritesPage() {
     return result;
   }, [ordered, activeGenres, searchTerm]);
 
-  if (favorites.length === 0) {
-    return (
-      <div style={{ textAlign: "center", padding: "40px" }}>
-        <h2>📭 Sua biblioteca está vazia.</h2>
-        <Link to="/">Voltar para o Museu</Link>
-      </div>
-    );
-  }
-
-  /* Ao soltar um item */
   const handleDragEnd = (event) => {
     const { active, over } = event;
     if (active.id !== over.id) {
@@ -143,11 +109,33 @@ function FavoritesPage() {
     }
   };
 
+  if (favorites.length === 0) {
+    return (
+      <div className="empty-library">
+        <h2>📭 Sua biblioteca está vazia.</h2>
+        <p>
+          Explore o <Link to="/">Museu dos Consoles</Link> e adicione jogos à sua estante!
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className="library-container">
-      <h2 className="library-title">📚 Minha Estante de Jogos</h2>
+      {/* === Cabeçalho estilizado === */}
+      <div className="library-header">
+        <h2>🎮 Minha Estante de Jogos</h2>
+        <p>Gerencie seus títulos favoritos, ordene, filtre e reviva a nostalgia!</p>
+      </div>
 
-      {/* === Barra de pesquisa === */}
+      {/* === Estatísticas rápidas === */}
+      <div className="library-stats">
+        <div><strong>{favorites.length}</strong> jogos</div>
+        <div><strong>{activeGenres.size || "Todos"}</strong> gêneros</div>
+        <div><strong>{xp}</strong> XP total</div>
+      </div>
+
+      {/* === Pesquisa === */}
       <input
         type="text"
         className="search-bar"
@@ -165,27 +153,25 @@ function FavoritesPage() {
         <span className="arrow-icon" />
       </button>
 
-      <div className={`genre-legend-wrapper ${showFilters ? "open" : ""}`}>
+      {showFilters && (
         <div className="genre-legend">
-          {genreColors.map((g) => {
-            const isAll = g.key === "all";
-            const isActive = isAll
-              ? activeGenres.size === 0
-              : activeGenres.has(g.key);
+          {["Ação", "Aventura", "RPG", "Plataforma", "Corrida", "Fantasia", "FPS", "Stealth"].map((g) => {
+            const key = mapGenreToKey(g);
+            const active = activeGenres.has(key);
             return (
               <button
-                key={g.key}
-                className={`genre-badge ${g.class} ${isActive ? "active" : ""}`}
-                onClick={() => toggleGenre(g.key)}
+                key={key}
+                className={`genre-badge ${active ? "active" : ""}`}
+                onClick={() => toggleGenre(key)}
               >
-                {g.name}
+                {g}
               </button>
             );
           })}
         </div>
-      </div>
+      )}
 
-      {/* === Prateleira === */}
+      {/* === Estante === */}
       <div className="shelf">
         <DndContext collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
           <SortableContext
