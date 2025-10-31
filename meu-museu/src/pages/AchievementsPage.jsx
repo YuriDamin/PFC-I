@@ -51,54 +51,41 @@ const allBadges = [
   { key: "all_favorites_10", name: "Coração de Gamer", desc: "Favoritou 10 jogos diferentes" },
   { key: "all_achievements_earned", name: "Lenda do Museu", desc: "Conquistou todas as insígnias disponíveis" },
 ];
-
 function AchievementsPage() {
   const { achievements } = useAchievements();
-
-  // Agrupamentos
-  const consoleBadges = allBadges.filter(
-    (b) => b.key.startsWith("quiz_") || b.key.startsWith("games_")
-  );
-  const generationBadges = allBadges.filter((b) => b.key.startsWith("generation_"));
-  const companyBadges = allBadges.filter((b) => b.key.startsWith("company_"));
-  const globalBadges = allBadges.filter((b) => b.key.startsWith("all_"));
-
-  // Função de renderização
-  const renderBadges = (badges, extraClass = "") =>
-    badges.map((b) => {
-      const unlocked = achievements[b.key];
-      return (
-        <div
-          key={b.key}
-          className={`badge ${unlocked ? "unlocked" : "locked"} ${extraClass}`}
-        >
-          <span className="icon">{unlocked ? "🏆" : "🔒"}</span>
-          <h4>{b.name}</h4>
-          <p>{b.desc}</p>
-        </div>
-      );
-    });
 
   return (
     <div className="achievements-container">
       <h2>🏅 Minhas Insígnias</h2>
 
-      {/* 🎮 Por Console */}
-      <h3>🎮 Por Console</h3>
-      <div className="badge-grid">{renderBadges(consoleBadges)}</div>
+      <div className="badge-grid">
+        {allBadges.map((b) => {
+          const unlocked = achievements[b.key];
+          let extraClass = "";
 
-      {/* 🕹️ Por Geração */}
-      <h3 style={{ color: "#38bdf8", marginTop: "40px" }}>🕹️ Por Geração</h3>
-      <div className="badge-grid">{renderBadges(generationBadges, "generation")}</div>
+          if (b.key.startsWith("generation_")) extraClass = "generation";
+          else if (b.key.startsWith("company_")) extraClass = "company";
+          else if (b.key.startsWith("all_")) extraClass = "global";
 
-      {/* 🏢 Por Empresa */}
-      <h3 style={{ color: "#fb923c", marginTop: "40px" }}>🏢 Por Empresa</h3>
-      <div className="badge-grid">{renderBadges(companyBadges, "company")}</div>
-
-      {/* 🌍 Conquistas Globais */}
-      <div className="global-section">
-        <h3>🌍 Conquistas Especiais</h3>
-        <div className="badge-grid">{renderBadges(globalBadges, "global")}</div>
+          return (
+            <div
+              key={b.key}
+              className={`badge ${unlocked ? "unlocked" : "locked"} ${extraClass}`}
+            >
+              <span className="icon">
+                {b.key.startsWith("all_")
+                  ? "👑"
+                  : b.key.startsWith("company_")
+                  ? "🏢"
+                  : b.key.startsWith("generation_")
+                  ? "🕹️"
+                  : "🏆"}
+              </span>
+              <h4>{b.name}</h4>
+              <p>{b.desc}</p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

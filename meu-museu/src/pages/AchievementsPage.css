@@ -1,4 +1,3 @@
-/* === Container Principal === */
 .achievements-container {
   max-width: 950px;
   margin: 40px auto;
@@ -9,29 +8,17 @@
 
 .achievements-container h2 {
   font-size: 2rem;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   color: var(--primary);
   text-shadow: 0 0 8px rgba(0, 196, 154, 0.4);
 }
 
-/* === Títulos de Seções === */
-.achievements-container h3 {
-  font-size: 1.5rem;
-  margin: 40px 0 15px;
-  font-weight: 700;
-  color: var(--text);
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.15);
-}
-
-/* === Grade de Insígnias === */
 .badge-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 22px;
-  margin-bottom: 30px;
 }
 
-/* === Card base de Insígnia === */
 .badge {
   position: relative;
   padding: 18px 12px;
@@ -43,30 +30,29 @@
 }
 
 .badge .icon {
-  font-size: 2.2rem;
+  font-size: 2rem;
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  opacity: 0.9;
 }
 
 .badge h4 {
-  margin: 8px 0 4px;
+  margin: 6px 0 4px;
   font-size: 1rem;
   font-weight: 700;
 }
 
 .badge p {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--muted);
   line-height: 1.3;
 }
 
-/* === Estado bloqueado === */
 .badge.locked {
   opacity: 0.4;
   filter: grayscale(100%);
 }
 
-/* === Estado desbloqueado === */
 .badge.unlocked {
   color: var(--primary);
   border-color: rgba(0, 196, 154, 0.5);
@@ -74,88 +60,44 @@
   transform: translateY(-2px);
 }
 
-/* === Categoria: Por Geração === */
+/* 🕹️ Geração */
 .badge.generation {
   border-color: #38bdf8;
-  box-shadow: 0 0 10px rgba(56, 189, 248, 0.15);
 }
-
 .badge.generation.unlocked {
   color: #38bdf8;
-  border-color: rgba(56, 189, 248, 0.6);
   box-shadow: 0 0 14px rgba(56, 189, 248, 0.4);
 }
 
-/* === Categoria: Por Empresa === */
+/* 🏢 Empresa */
 .badge.company {
   border-color: #fb923c;
-  box-shadow: 0 0 10px rgba(251, 146, 60, 0.15);
 }
-
 .badge.company.unlocked {
   color: #fb923c;
-  border-color: rgba(251, 146, 60, 0.5);
   box-shadow: 0 0 14px rgba(251, 146, 60, 0.4);
 }
 
-/* === Categoria: Global === */
-.global-section {
-  margin-top: 50px;
-  border-top: 1px dashed rgba(255, 255, 255, 0.08);
-  padding-top: 30px;
-}
-
-.global-section h3 {
-  margin-bottom: 20px;
-  font-size: 1.6rem;
-  color: gold;
-  text-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
-}
-
+/* 👑 Globais */
 .badge.global {
   border-color: gold;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.25);
 }
-
 .badge.global.unlocked {
   color: gold;
-  background: rgba(255, 215, 0, 0.08);
-  border-color: rgba(255, 215, 0, 0.6);
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.45);
   animation: pulse-glow 2.5s infinite ease-in-out;
 }
 
-/* === Efeito de Brilho Pulsante (Globais) === */
 @keyframes pulse-glow {
   0%, 100% {
     box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-    transform: translateY(-2px);
   }
   50% {
-    box-shadow: 0 0 24px rgba(255, 215, 0, 0.65);
-    transform: translateY(0);
+    box-shadow: 0 0 22px rgba(255, 215, 0, 0.6);
   }
 }
 
-/* === Responsividade === */
 @media (max-width: 640px) {
-  .achievements-container h2 {
-    font-size: 1.6rem;
-  }
-
-  .achievements-container h3 {
-    font-size: 1.2rem;
-  }
-
-  .badge {
-    padding: 14px 8px;
-  }
-
-  .badge h4 {
-    font-size: 0.9rem;
-  }
-
-  .badge p {
-    font-size: 0.75rem;
-  }
+  .badge h4 { font-size: 0.9rem; }
+  .badge p { font-size: 0.75rem; }
 }
