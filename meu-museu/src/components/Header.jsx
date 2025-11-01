@@ -10,6 +10,7 @@ import {
   LogOut,
   Menu,
   X,
+  User,
 } from "lucide-react";
 import "./Header.css";
 
@@ -21,6 +22,7 @@ function Header() {
   const location = useLocation();
   const navigate = useNavigate();
 
+  // Atualiza a barra de XP conforme o progresso
   useEffect(() => {
     if (barRef.current) {
       barRef.current.style.width = `${progress * 100}%`;
@@ -63,19 +65,27 @@ function Header() {
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
 
-        {/* === Ações Desktop === */}
+        {/* === Ações === */}
         <div className={`header-actions ${menuOpen ? "open" : ""}`}>
-          {user && (
-            <div className="user-info">
-              <p>
-                <strong>{user.email}</strong>
-                {user.isVisitor && (
-                  <span className="visitor-badge">Visitante</span>
-                )}
-              </p>
+          {/* === Usuário === */}
+          <div className="user-info">
+            <div className="user-display">
+              <User size={18} className="user-icon" />
+              <strong>
+                {user
+                  ? user.isVisitor
+                    ? "Visitante"
+                    : user.name
+                    ? user.name
+                    : user.email
+                    ? user.email.split("@")[0]
+                    : "Usuário"
+                  : "Carregando..."}
+              </strong>
             </div>
-          )}
+          </div>
 
+          {/* === XP === */}
           <div className="xp-container">
             <div className="xp-info">
               <span>Nível {level}</span>
@@ -86,6 +96,7 @@ function Header() {
             </div>
           </div>
 
+          {/* === Navegação === */}
           <Link
             to="/biblioteca"
             className="header-btn"
@@ -104,6 +115,7 @@ function Header() {
             <span>Insígnias</span>
           </Link>
 
+          {/* === Logout === */}
           <button
             className="header-btn logout"
             onClick={() => {

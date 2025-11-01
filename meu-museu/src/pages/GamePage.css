@@ -104,3 +104,13 @@
   background: rgba(239, 68, 68, 0.25);
   box-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
 }
+
+/* === Remove qualquer sublinhado do botão de quiz === */
+.quiz-link-btn,
+.quiz-link-btn:visited,
+.quiz-link-btn:hover,
+.quiz-link-btn:focus,
+.quiz-link-btn:active {
+  text-decoration: none !important;
+  outline: none;
+}

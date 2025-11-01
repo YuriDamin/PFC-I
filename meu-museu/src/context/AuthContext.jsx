@@ -1,6 +1,6 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import Toast from '../components/Toast';
+import React, { createContext, useContext, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import Toast from "../components/Toast";
 
 const AuthContext = createContext();
 
@@ -9,36 +9,61 @@ export function AuthProvider({ children }) {
   const [toast, setToast] = useState(null);
   const navigate = useNavigate();
 
+  // 🔹 Recupera usuário salvo no localStorage
   useEffect(() => {
-    const savedUser = localStorage.getItem('user');
-    if (savedUser) setUser(JSON.parse(savedUser));
+    const savedUser = localStorage.getItem("user");
+    if (savedUser) {
+      const parsed = JSON.parse(savedUser);
+      // Compatibilidade retroativa — adiciona campos novos se não existirem
+      if (parsed && !parsed.name) {
+        parsed.name = parsed.email?.split("@")[0] || "Usuário";
+        parsed.isVisitor = parsed.email === "visitante@museu.com";
+        localStorage.setItem("user", JSON.stringify(parsed));
+      }
+      setUser(parsed);
+    }
   }, []);
 
+  // 🔹 Login com validação e mensagem personalizada
   const login = (email, senha) => {
-    const isAdmin = email === 'admin@museu.com' && senha === '1234';
-    const isVisitor = email === 'visitante@museu.com' && senha === 'guest';
+    const isAdmin = email === "admin@museu.com" && senha === "1234";
+    const isVisitor = email === "visitante@museu.com" && senha === "guest";
 
     if (isAdmin || isVisitor) {
-      const newUser = { email };
-      setUser(newUser);
-      localStorage.setItem('user', JSON.stringify(newUser));
-      navigate('/');
+      const newUser = {
+        email,
+        name: isAdmin ? "Administrador" : "Visitante",
+        isVisitor,
+      };
 
-      if (isVisitor) {
-        setToast({
-          message: 'Você está no modo visitante. Seu progresso não será salvo.',
-          type: 'success',
-        });
-      }
+      setUser(newUser);
+      localStorage.setItem("user", JSON.stringify(newUser));
+      navigate("/");
+
+      // === Mensagem de boas-vindas ===
+      setToast({
+        message: isVisitor
+          ? "👋 Bem-vindo(a), Visitante! Aproveite o museu!"
+          : "👋 Bem-vindo de volta, Administrador!",
+        type: "success",
+      });
+
       return true;
     }
+
+    // === Mensagem de erro ===
+    setToast({
+      message: "❌ Credenciais inválidas. Tente novamente.",
+      type: "error",
+    });
     return false;
   };
 
+  // 🔹 Logout com redirecionamento
   const logout = () => {
     setUser(null);
-    localStorage.removeItem('user');
-    navigate('/login');
+    localStorage.removeItem("user");
+    navigate("/login");
   };
 
   return (
