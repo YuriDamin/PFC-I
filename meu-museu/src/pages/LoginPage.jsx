@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import './LoginPage.css';
 
@@ -55,6 +56,14 @@ function LoginPage() {
         <button onClick={handleGuestLogin} className="guest-btn">
           👾 Entrar como Visitante
         </button>
+
+        {/* 🔹 Novo bloco: criar conta */}
+        <p className="register-text">
+          Ainda não tem conta?{' '}
+          <Link to="/register" className="register-link">
+            ✨ Criar Conta
+          </Link>
+        </p>
       </div>
     </div>
   );
