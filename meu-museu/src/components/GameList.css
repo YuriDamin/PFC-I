@@ -1,3 +1,4 @@
+/* === GameList.css atualizado === */
 .game-list-wrapper {
   display: flex;
   flex-direction: column;
@@ -44,50 +45,6 @@
   border-top-color: var(--primary);
 }
 
-/* --- Container animado dos filtros --- */
-.genre-legend-wrapper {
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  transform: scaleY(0.9);
-  transform-origin: top;
-  transition: all 0.3s ease;
-}
-.genre-legend-wrapper.open {
-  max-height: 200px;
-  opacity: 1;
-  transform: scaleY(1);
-}
-
-/* --- Legenda propriamente dita --- */
-.genre-legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 6px 0 8px;
-}
-.genre-legend .genre-badge {
-  cursor: pointer;
-  user-select: none;
-  opacity: .9;
-  transition: transform .15s ease, opacity .15s ease, box-shadow .15s ease, background .15s ease;
-}
-.genre-legend .genre-badge:hover {
-  transform: translateY(-2px);
-  opacity: 1;
-  box-shadow: var(--ring);
-}
-.genre-legend .genre-badge.active {
-  background: rgba(255,255,255,.06);
-  box-shadow: var(--ring);
-}
-
-/* --- Feedback --- */
-.genre-feedback {
-  font-size: .9rem;
-  color: var(--muted);
-}
-
 /* --- Lista de jogos --- */
 .game-list-container {
   display: flex;
@@ -95,30 +52,12 @@
   gap: 14px;
 }
 
-/* --- Estado vazio --- */
-.empty-list {
-  padding: 16px;
-  border: 1px dashed var(--border);
-  border-radius: 10px;
-  color: var(--muted);
-  background: rgba(0,0,0,.1);
-}
-
-/* --- Barra de pesquisa --- */
-.search-bar {
-  width: 100%;
-  padding: 10px 14px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border);
-  background: rgba(28,43,64,0.7);
-  color: var(--text);
-  font-size: 0.95rem;
-  margin-bottom: 10px;
-  transition: all 0.2s ease;
-}
-.search-bar:focus {
+/* --- Remove sublinhado de todos os links --- */
+.game-list-container a,
+.game-list-container a:visited,
+.game-list-container a:hover,
+.game-list-container a:focus,
+.game-list-container a:active {
+  text-decoration: none !important;
   outline: none;
-  border-color: rgba(0,196,154,0.5);
-  box-shadow: var(--ring);
 }
-
