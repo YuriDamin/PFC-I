@@ -12,7 +12,7 @@ import wrongSound from "../assets/sounds/wrong.mp3";
 function QuizConsole() {
   const { consoleId } = useParams();
   const { addXP } = useXP();
-  const { unlock } = useAchievements(); // 🏅 Novo
+  const { unlock } = useAchievements();
   const navigate = useNavigate();
   const consoleData = getConsoleById(consoleId);
 
@@ -62,20 +62,19 @@ function QuizConsole() {
       setAcertos((prev) => prev + 1);
       audioCorrect.current.play();
 
-      // ✅ Só ganha XP se ainda não acertou esta questão antes
       if (localStorage.getItem(questaoKey) !== "true") {
         addXP(20);
         localStorage.setItem(questaoKey, "true");
         setToast({ message: "✅ Resposta correta! +20 XP!", type: "success" });
       } else {
         setToast({
-          message: "ℹ️ Você já ganhou XP por esta questão.",
+          message: " Você já ganhou XP por esta questão.",
           type: "info",
         });
       }
     } else {
       audioWrong.current.play();
-      setToast({ message: "❌ Errou! Tente a próxima!", type: "error" });
+      setToast({ message: " Errou! Tente a próxima!", type: "error" });
     }
 
     if (indice + 1 < quiz.length) {
@@ -91,12 +90,23 @@ function QuizConsole() {
     }
   };
 
-  // 🏅 Quando o quiz termina, concede a insígnia
+  // 🏅 Desbloqueia insígnia ao finalizar o quiz
   useEffect(() => {
     if (finalizado && quiz.length > 0) {
       unlock(`quiz_${consoleId}`, `Completou o quiz do ${consoleData.nome}`);
     }
   }, [finalizado, consoleId, consoleData, quiz.length, unlock]);
+
+  // 🔁 Reinicia o quiz sem recarregar
+  const refazerQuiz = () => {
+    setIndice(0);
+    setAcertos(0);
+    setFinalizado(false);
+    setToast({
+      message: "🔁 Quiz reiniciado! Boa sorte!",
+      type: "info",
+    });
+  };
 
   return (
     <div className="quiz-console-container">
@@ -158,13 +168,13 @@ function QuizConsole() {
             </p>
           )}
 
-          <Link
-            to={`/console/${consoleId}`}
+          <button
             className="quiz-voltar-btn"
             style={{ marginTop: "20px" }}
+            onClick={refazerQuiz}
           >
-            ⬅️ Voltar ao Console
-          </Link>
+            🔁 Refazer o Quiz
+          </button>
         </div>
       )}
 

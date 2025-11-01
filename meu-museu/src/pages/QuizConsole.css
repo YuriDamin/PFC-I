@@ -1,111 +1,166 @@
 .quiz-console-container {
-  max-width: 600px;
+  background: linear-gradient(180deg, rgba(28, 43, 64, 0.9), rgba(28, 43, 64, 0.7));
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 700px;
   margin: 40px auto;
   text-align: center;
-  background: linear-gradient(180deg, rgba(28,43,64,.85), rgba(28,43,64,.6));
-  padding: 24px;
-  border-radius: var(--radius);
   box-shadow: var(--shadow);
   color: var(--text);
-  animation: fadeIn 0.4s ease;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+/* === Cabeçalho do Quiz === */
+.quiz-console-container .quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
+/* === Botões gerais (voltar/menu) === */
+.quiz-voltar-btn,
+.quiz-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 14px;
+  font-weight: 600;
+  color: var(--text);
+  background: rgba(0, 196, 154, 0.15);
+  border: 1px solid rgba(0, 196, 154, 0.4);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.quiz-voltar-btn:hover,
+.quiz-btn:hover {
+  background: rgba(0, 196, 154, 0.3);
+  box-shadow: 0 0 8px rgba(0, 196, 154, 0.4);
+  transform: translateY(-2px);
+}
+
+/* === Título principal do Quiz === */
+.quiz-console-container h2 {
+  font-size: 1.6rem; /* consistente com títulos das outras páginas */
+  font-weight: 800;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 24px;
+  letter-spacing: 0.3px;
+}
+
+/* === Perguntas === */
 .quiz-pergunta {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  margin: 20px 0 14px;
+  margin-bottom: 16px;
   color: var(--text);
 }
 
+/* === Opções === */
 .quiz-opcoes {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
 .quiz-opcoes button {
-  padding: 12px;
+  padding: 10px 14px;
   border-radius: 8px;
-  border: 1px solid var(--border);
-  background: rgba(0,196,154,0.15);
-  color: var(--text);
-  font-weight: 700;
+  font-size: 1rem;
   cursor: pointer;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
   transition: all 0.2s ease;
 }
 
 .quiz-opcoes button:hover {
-  background: rgba(0,196,154,0.3);
-  transform: translateY(-2px);
-  box-shadow: var(--ring);
+  background: rgba(0, 196, 154, 0.15);
+  border-color: rgba(0, 196, 154, 0.5);
 }
 
+.quiz-opcoes button.correct {
+  background: rgba(34, 197, 94, 0.25);
+  border-color: rgba(34, 197, 94, 0.8);
+}
+
+.quiz-opcoes button.wrong {
+  background: rgba(239, 68, 68, 0.25);
+  border-color: rgba(239, 68, 68, 0.8);
+}
+
+/* === Progresso === */
 .quiz-progresso {
-  margin-top: 18px;
-  font-size: 0.9rem;
+  margin-top: 10px;
+  font-size: 0.95rem;
   color: var(--muted);
 }
 
+/* === Tela de fim de quiz === */
 .quiz-fim {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
-.quiz-fim h3 {
+.quiz-console-container h3 {
   font-size: 1.4rem;
+  font-weight: 700;
   color: var(--primary);
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .quiz-premio {
-  font-weight: 800;
   font-size: 1rem;
-  color: var(--primary);
-  margin-top: 10px;
-  animation: pulse 1s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.6; }
-}
-
-.quiz-voltar-btn {
-  display: inline-block;
-  margin-top: 20px;
-  background: rgba(0,196,154,0.2);
-  border: 1px solid var(--border);
-  padding: 10px 16px;
-  border-radius: 8px;
-  color: var(--primary);
-  font-weight: 700;
-  text-decoration: none;
-  transition: all 0.25s ease;
-}
-
-.quiz-voltar-btn:hover {
-  background: rgba(0,196,154,0.35);
-  transform: translateY(-2px);
-  box-shadow: var(--ring);
-}
-
-.quiz-console-container .quiz-voltar-btn {
-  margin-top: 0;
-}
-
-.quiz-console-container button.quiz-voltar-btn {
-  cursor: pointer;
-}
-.quiz-aviso {
-  text-align: center;
-  color: #00c49a;
   font-weight: 600;
-  background: rgba(0, 196, 154, 0.1);
-  border: 1px solid rgba(0, 196, 154, 0.2);
-  padding: 8px;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  color: var(--primary);
+  margin: 10px 0 20px;
+}
+
+/* === Botão Refazer Quiz === */
+.quiz-refazer-btn,
+.quiz-fim .quiz-voltar-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 10px 18px;
+  font-weight: 600;
+  color: var(--text);
+  background: rgba(0, 196, 154, 0.15);
+  border: 1px solid rgba(0, 196, 154, 0.4);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.quiz-refazer-btn:hover,
+.quiz-fim .quiz-voltar-btn:hover {
+  background: rgba(0, 196, 154, 0.3);
+  box-shadow: 0 0 8px rgba(0, 196, 154, 0.4);
+  transform: translateY(-2px);
+}
+
+/* === Responsividade === */
+@media (max-width: 600px) {
+  .quiz-console-container {
+    padding: 20px;
+  }
+
+  .quiz-console-container .quiz-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .quiz-opcoes button {
+    font-size: 0.95rem;
+  }
 }
