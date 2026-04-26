@@ -114,3 +114,37 @@
   text-decoration: none !important;
   outline: none;
 }
+.game-videos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 16px;
+}
+
+.video-card {
+  background: rgba(12, 28, 50, 0.9);
+  border: 1px solid rgba(0, 210, 180, 0.25);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.video-card h4 {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #071423;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}

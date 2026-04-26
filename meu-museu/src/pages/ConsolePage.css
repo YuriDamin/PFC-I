@@ -62,3 +62,8 @@
   transform: translateY(-2px);
 }
 
+.descricao-console {
+  white-space: pre-wrap;
+  text-align: justify; /* Opcional: para um visual mais formal */
+  line-height: 1.6;    /* Melhora a leitura de textos longos */
+}

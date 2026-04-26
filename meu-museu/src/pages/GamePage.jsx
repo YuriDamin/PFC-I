@@ -105,7 +105,29 @@ if (count === 15) {
             <img key={index} src={img} alt={`Screenshot ${index + 1}`} />
           ))}
         </div>
+        
+{jogo.detalhes.videos && jogo.detalhes.videos.length > 0 && (
+  <>
+    <h3>Vídeos</h3>
 
+    <div className="game-videos">
+      {jogo.detalhes.videos.map((video, index) => (
+        <div className="video-card" key={index}>
+          <h4>{video.titulo}</h4>
+
+          <div className="video-wrapper">
+            <iframe
+              src={video.url}
+              title={video.titulo}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      ))}
+    </div>
+  </>
+)}
         <h3>Dicas e Curiosidades</h3>
         <ul className="game-tips">
           {jogo.detalhes.dicas.map((dica, index) => (
