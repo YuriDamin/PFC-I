@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { getConsoleById, getGameById } from '../dados/museuDados';
 import { useXP } from '../context/XPContext';
 import { useFavorites } from '../context/FavoritesContext';
-import { useAchievements } from '../context/AchievementsContext'; // 🏅 Novo
+import { useAchievements } from '../context/AchievementsContext';
 import Toast from '../components/Toast';
 import './GamePage.css';
 
@@ -13,14 +13,30 @@ function GamePage() {
   const jogo = getGameById(consoleId, gameId);
   const { addXP } = useXP();
   const { isFavorite, toggleFavorite } = useFavorites();
-  const { unlock } = useAchievements(); // 🏅 Novo
+  const { unlock } = useAchievements();
 
   const [toast, setToast] = useState(null);
-const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
+  const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
+  const [isImageModalOpen, setIsImageModalOpen] = useState(false);
 
-useEffect(() => {
-  setCurrentGalleryIndex(0);
-}, [consoleId, gameId]);
+  useEffect(() => {
+    setCurrentGalleryIndex(0);
+    setIsImageModalOpen(false);
+  }, [consoleId, gameId]);
+
+  useEffect(() => {
+    function handleEsc(event) {
+      if (event.key === 'Escape') {
+        setIsImageModalOpen(false);
+      }
+    }
+
+    window.addEventListener('keydown', handleEsc);
+
+    return () => {
+      window.removeEventListener('keydown', handleEsc);
+    };
+  }, []);
 
   useEffect(() => {
     if (jogo) {
@@ -45,15 +61,15 @@ useEffect(() => {
       const count = parseInt(localStorage.getItem(key) || '0', 10) + 1;
       localStorage.setItem(key, count);
 
-if (count === 5) {
-  unlock(`${key}_5`, `Explorou 5 jogos do ${console.nome}`);
-}
-if (count === 10) {
-  unlock(`${key}_10`, `Explorou 10 jogos do ${console.nome}`);
-}
-if (count === 15) {
-  unlock(`${key}_15`, `Explorou 15 jogos do ${console.nome}`);
-}
+      if (count === 5) {
+        unlock(`${key}_5`, `Explorou 5 jogos do ${console.nome}`);
+      }
+      if (count === 10) {
+        unlock(`${key}_10`, `Explorou 10 jogos do ${console.nome}`);
+      }
+      if (count === 15) {
+        unlock(`${key}_15`, `Explorou 15 jogos do ${console.nome}`);
+      }
     }
   }, [consoleId, jogo, console, unlock]);
 
@@ -70,21 +86,22 @@ if (count === 15) {
   const galleryImages = jogo.detalhes?.imagens_galeria || [];
   const hasGallery = galleryImages.length > 0;
 
-function handlePrevImage() {
-  if (!hasGallery) return;
+  function handlePrevImage() {
+    if (!hasGallery) return;
 
-  setCurrentGalleryIndex((prev) =>
-    prev === 0 ? galleryImages.length - 1 : prev - 1
-  );
-}
+    setCurrentGalleryIndex((prev) =>
+      prev === 0 ? galleryImages.length - 1 : prev - 1
+    );
+  }
 
-function handleNextImage() {
-  if (!hasGallery) return;
+  function handleNextImage() {
+    if (!hasGallery) return;
 
-  setCurrentGalleryIndex((prev) =>
-    prev === galleryImages.length - 1 ? 0 : prev + 1
-  );
-}
+    setCurrentGalleryIndex((prev) =>
+      prev === galleryImages.length - 1 ? 0 : prev + 1
+    );
+  }
+
   return (
     <div className="game-page-container">
       <Link to={`/console/${consoleId}`} className="link-voltar">
@@ -119,86 +136,94 @@ function handleNextImage() {
         <h3>Sobre o Jogo</h3>
         <p>{jogo.detalhes.descricao_longa}</p>
 
-         <h3>Galeria de Imagens</h3>
+        <h3>Galeria de Imagens</h3>
 
-{hasGallery && (
-  <div className="game-carousel">
-    <div className="carousel-main">
-      <img
-        src={galleryImages[currentGalleryIndex]}
-        alt={`Screenshot ${currentGalleryIndex + 1}`}
-        className="carousel-main-image"
-      />
+        {hasGallery && (
+          <div className="game-carousel">
+            <div className="carousel-main">
+              <button
+                type="button"
+                className="carousel-image-button"
+                onClick={() => setIsImageModalOpen(true)}
+                aria-label="Abrir imagem em tela cheia"
+              >
+                <img
+                  src={galleryImages[currentGalleryIndex]}
+                  alt={`Screenshot ${currentGalleryIndex + 1}`}
+                  className="carousel-main-image"
+                />
+              </button>
 
-      {galleryImages.length > 1 && (
-        <>
-          <button
-            type="button"
-            className="carousel-btn prev"
-            onClick={handlePrevImage}
-            aria-label="Imagem anterior"
-          >
-            ‹
-          </button>
+              {galleryImages.length > 1 && (
+                <>
+                  <button
+                    type="button"
+                    className="carousel-btn prev"
+                    onClick={handlePrevImage}
+                    aria-label="Imagem anterior"
+                  >
+                    ‹
+                  </button>
 
-          <button
-            type="button"
-            className="carousel-btn next"
-            onClick={handleNextImage}
-            aria-label="Próxima imagem"
-          >
-            ›
-          </button>
-        </>
-      )}
+                  <button
+                    type="button"
+                    className="carousel-btn next"
+                    onClick={handleNextImage}
+                    aria-label="Próxima imagem"
+                  >
+                    ›
+                  </button>
+                </>
+              )}
 
-      <span className="carousel-counter">
-        {currentGalleryIndex + 1} / {galleryImages.length}
-      </span>
-    </div>
+              <span className="carousel-counter">
+                {currentGalleryIndex + 1} / {galleryImages.length}
+              </span>
+            </div>
 
-    {galleryImages.length > 1 && (
-      <div className="carousel-thumbnails">
-        {galleryImages.map((img, index) => (
-          <button
-            key={index}
-            type="button"
-            className={`carousel-thumb ${
-              currentGalleryIndex === index ? 'active' : ''
-            }`}
-            onClick={() => setCurrentGalleryIndex(index)}
-            aria-label={`Ver screenshot ${index + 1}`}
-          >
-            <img src={img} alt={`Miniatura ${index + 1}`} />
-          </button>
-        ))}
-      </div>
-    )}
-  </div>
-)}
-        
-{jogo.detalhes.videos && jogo.detalhes.videos.length > 0 && (
-  <>
-    <h3>Vídeos</h3>
-
-    <div className="game-videos">
-      {jogo.detalhes.videos.map((video, index) => (
-        <div className="video-card" key={index}>
-          <h4>{video.titulo}</h4>
-
-          <div className="video-wrapper">
-            <iframe
-              src={video.url}
-              title={video.titulo}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
+            {galleryImages.length > 1 && (
+              <div className="carousel-thumbnails">
+                {galleryImages.map((img, index) => (
+                  <button
+                    key={index}
+                    type="button"
+                    className={`carousel-thumb ${
+                      currentGalleryIndex === index ? 'active' : ''
+                    }`}
+                    onClick={() => setCurrentGalleryIndex(index)}
+                    aria-label={`Ver screenshot ${index + 1}`}
+                  >
+                    <img src={img} alt={`Miniatura ${index + 1}`} />
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
-        </div>
-      ))}
-    </div>
-  </>
-)}
+        )}
+
+        {jogo.detalhes.videos && jogo.detalhes.videos.length > 0 && (
+          <>
+            <h3>Vídeos</h3>
+
+            <div className="game-videos">
+              {jogo.detalhes.videos.map((video, index) => (
+                <div className="video-card" key={index}>
+                  <h4>{video.titulo}</h4>
+
+                  <div className="video-wrapper">
+                    <iframe
+                      src={video.url}
+                      title={video.titulo}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+
         <h3>Dicas e Curiosidades</h3>
         <ul className="game-tips">
           {jogo.detalhes.dicas.map((dica, index) => (
@@ -206,6 +231,33 @@ function handleNextImage() {
           ))}
         </ul>
       </div>
+
+      {isImageModalOpen && hasGallery && (
+        <div
+          className="image-modal-overlay"
+          onClick={() => setIsImageModalOpen(false)}
+        >
+          <div
+            className="image-modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="image-modal-close"
+              onClick={() => setIsImageModalOpen(false)}
+              aria-label="Fechar imagem"
+            >
+              ×
+            </button>
+
+            <img
+              src={galleryImages[currentGalleryIndex]}
+              alt={`Screenshot ampliado ${currentGalleryIndex + 1}`}
+              className="image-modal-img"
+            />
+          </div>
+        </div>
+      )}
 
       {/* --- Toast de XP ou Favorito --- */}
       {toast && (
