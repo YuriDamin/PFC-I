@@ -11,12 +11,23 @@ function LoginPage() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    const ok = login(email, senha);
-    if (!ok) setErro('E-mail ou senha incorretos.');
+    setErro('');
+
+    const ok = login(email.trim(), senha);
+
+    if (!ok) {
+      setErro('E-mail ou senha incorretos.');
+    }
   };
 
   const handleGuestLogin = () => {
-    login('visitante@museu.com', 'guest');
+    setErro('');
+
+    const ok = login('visitante@museu.com', 'guest');
+
+    if (!ok) {
+      setErro('Não foi possível entrar como visitante.');
+    }
   };
 
   return (
@@ -48,16 +59,17 @@ function LoginPage() {
 
           {erro && <p className="erro">{erro}</p>}
 
-          <button type="submit" className="login-btn">Entrar</button>
+          <button type="submit" className="login-btn">
+            Entrar
+          </button>
         </form>
 
         <div className="divider">ou</div>
 
-        <button onClick={handleGuestLogin} className="guest-btn">
+        <button type="button" onClick={handleGuestLogin} className="guest-btn">
           👾 Entrar como Visitante
         </button>
 
-        {/* 🔹 Novo bloco: criar conta */}
         <p className="register-text">
           Ainda não tem conta?{' '}
           <Link to="/register" className="register-link">

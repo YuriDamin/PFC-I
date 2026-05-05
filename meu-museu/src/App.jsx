@@ -7,12 +7,12 @@ import GamePage from "./pages/GamePage";
 import LoginPage from "./pages/LoginPage";
 import FavoritesPage from "./pages/FavoritesPage";
 import QuizConsole from "./pages/QuizConsole";
-import AchievementsPage from "./pages/AchievementsPage"; // 🏅 Novo
-
+import AchievementsPage from "./pages/AchievementsPage"; 
+import RegisterPage from './pages/RegisterPage';
 import { AuthProvider } from "./context/AuthContext";
 import { XPProvider } from "./context/XPContext";
 import { FavoritesProvider } from "./context/FavoritesContext";
-import { AchievementsProvider } from "./context/AchievementsContext"; // 🆕 Novo
+import { AchievementsProvider } from "./context/AchievementsContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 import "./App.css";
@@ -20,7 +20,6 @@ import "./App.css";
 function App() {
   const location = useLocation();
 
-  // Esconde o Header apenas na tela de login
   const hideHeader = location.pathname === "/login";
 
   return (
@@ -94,6 +93,9 @@ function App() {
                       </ProtectedRoute>
                     }
                   />
+
+                  {/* 🆕 Página de Registro */}
+                  <Route path="/register" element={<RegisterPage />} />
                 </Routes>
               </main>
             </AchievementsProvider>
