@@ -315,10 +315,11 @@ export const imagensJogos = {
   capa: "https://images.launchbox-app.com/ff5c1890-daaf-4e59-af62-e02077119d00.png",
   galeria: [
     "https://images.launchbox-app.com/r2_37cc3e22-acf8-4294-9e58-d911cd1f9ca1.png",
-    "https://images.launchbox-app.com/r2_70a8ca29-65cb-44f7-92aa-425d69ac31d2.png",
-    "https://images.launchbox-app.com/r2_a505d617-bc60-4d55-b451-470f74c1039a.png",
-    "https://images.launchbox-app.com/r2_13b98188-14e5-4a25-9879-e5c6694fd987.png",
-    "https://images.launchbox-app.com/r2_fcf91990-715a-4f91-b7a7-8914a64d29b5.png",
+    "https://images.nintendolife.com/screenshots/16707/300x200.jpg",
+    "https://images.nintendolife.com/screenshots/16706/300x200.jpg",
+    "https://images.nintendolife.com/screenshots/16705/300x200.jpg",
+    "https://images.nintendolife.com/screenshots/16704/300x200.jpg",
+    "https://images.nintendolife.com/screenshots/16703/300x200.jpg",
   ],
 },
 
