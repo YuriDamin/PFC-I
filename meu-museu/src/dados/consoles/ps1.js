@@ -7,7 +7,7 @@ export const ps1 = {
   fabricante: "Sony",
   fabricanteId: "sony",
   imagem_url:
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/PSX-Console-wController.jpg/640px-PSX-Console-wController.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/3/39/PSX-Console-wController.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
     historia:
     `O PlayStation baseia sua operação na CPU MIPS R3000A de 32 bits, operando a 33,8 MHz, com unidades integradas para processamento geométrico (GTE) e descompressão de vídeo (MDEC). O sistema possui 2 MB de RAM principal e 1 MB de VRAM dedicada à GPU, que é capaz de processar até 360.000 polígonos por segundo com mapeamento de texturas. A unidade de áudio (SPU) suporta 24 canais de som ADPCM com qualidade superior a CD.
 

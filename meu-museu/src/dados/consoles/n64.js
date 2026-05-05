@@ -6,7 +6,7 @@ export const n64 = {
   geracaoId: "5a",
   fabricante: "Nintendo",
   fabricanteId: "nintendo",
-  imagem_url: "https://m.media-amazon.com/images/I/51mNbBlopOL._SX522_.jpg",
+  imagem_url: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Nintendo-64-wController-R.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
     historia:
     `A arquitetura do Nintendo 64 é fundamentada no processador NEC VR4300 de 64 bits, operando a 93,75 MHz, e no co-processador Reality Co-Processor (RCP) desenvolvido pela Silicon Graphics (SGI). O RCP integra o Reality Drawing Processor (RDP) para rasterização de imagens e o Reality Signal Processor (RSP) para transformações geométricas e áudio. O sistema utiliza uma arquitetura de memória unificada (UMA) de 4 MB de RAM RDRAM, expansível para 8 MB via Expansion Pak.
 

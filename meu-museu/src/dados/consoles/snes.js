@@ -7,7 +7,7 @@ export const snes = {
   fabricante: "Nintendo",
   fabricanteId: "nintendo",
   imagem_url:
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/SNES-Mod1-Console-Set.jpg/1200px-SNES-Mod1-Console-Set.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/3/36/SNES-Mod1-Console-Set.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
     historia:
     `O Super Nintendo Entertainment System utiliza o processador central Ricoh 5A22, baseado na arquitetura WDC 65C816 de 16 bits, operando a uma frequência variável de até 3,58 MHz. O destaque técnico do console reside em suas Unidades de Processamento Gráfico (PPU) duplas, que permitem o "Mode 7", uma técnica de rotação e escala de camadas que simula ambientes tridimensionais. O sistema de áudio é gerido por um co-processador Sony SPC700 de 8 bits, capaz de produzir som estéreo com base em amostras (ADPCM) de alta qualidade.
 

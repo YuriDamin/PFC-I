@@ -7,7 +7,7 @@ export const ps2 = {
   fabricante: "Sony",
   fabricanteId: "sony",
   imagem_url:
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/PS2-Versions.jpg/1016px-PS2-Versions.jpg?20130620234911",
+    "https://upload.wikimedia.org/wikipedia/commons/c/c3/Sony-PlayStation-2-30001-wController-L.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
   historia:
     `O PlayStation 2 utiliza o processador Emotion Engine (EE) de 128 bits, operando a 294 MHz, que integra um núcleo MIPS III R5900 e duas unidades de co-processamento vetorial (VU0 e VU1). O processamento gráfico é realizado pelo Graphics Synthesizer (GS), operando a 150 MHz com 4 MB de DRAM embutida na placa, permitindo uma largura de banda de memória massiva de 1,2 GB/s. O sistema inclui 32 MB de RAM principal e suporte nativo à reprodução de filmes em DVD.
 
