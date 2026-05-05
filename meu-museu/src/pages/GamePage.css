@@ -148,3 +148,137 @@
   height: 100%;
   border: none;
 }
+
+/* === Carrossel da Galeria === */
+.game-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.carousel-main {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #071423;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.carousel-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Botões laterais */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 196, 154, 0.45);
+  background: rgba(12, 28, 50, 0.82);
+  color: var(--primary);
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  z-index: 2;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 196, 154, 0.18);
+  box-shadow: var(--ring);
+}
+
+.carousel-btn.prev {
+  left: 14px;
+}
+
+.carousel-btn.next {
+  right: 14px;
+}
+
+/* Contador */
+.carousel-counter {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(12, 28, 50, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* Miniaturas */
+.carousel-thumbnails {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.carousel-thumb {
+  width: 94px;
+  height: 58px;
+  flex: 0 0 auto;
+  padding: 0;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #071423;
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0.65;
+  transition: all 0.25s ease;
+}
+
+.carousel-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-thumb:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  border-color: rgba(0, 196, 154, 0.45);
+}
+
+.carousel-thumb.active {
+  opacity: 1;
+  border-color: var(--primary);
+  box-shadow: var(--ring);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .carousel-main {
+    aspect-ratio: 4 / 3;
+  }
+
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.7rem;
+  }
+
+  .carousel-thumb {
+    width: 78px;
+    height: 50px;
+  }
+}

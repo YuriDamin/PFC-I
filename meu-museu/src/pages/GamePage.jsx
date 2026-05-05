@@ -16,8 +16,12 @@ function GamePage() {
   const { unlock } = useAchievements(); // 🏅 Novo
 
   const [toast, setToast] = useState(null);
+const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
 
-  // 🎮 Ganha XP ao abrir o jogo pela primeira vez
+useEffect(() => {
+  setCurrentGalleryIndex(0);
+}, [consoleId, gameId]);
+
   useEffect(() => {
     if (jogo) {
       const xpKey = `xp_given_${consoleId}_${gameId}`;
@@ -35,7 +39,6 @@ function GamePage() {
     }
   }, [consoleId, gameId, jogo, addXP]);
 
-  // 🏅 Contabiliza jogos explorados e libera insígnias
   useEffect(() => {
     if (jogo && console) {
       const key = `games_${consoleId}`;
@@ -64,7 +67,24 @@ if (count === 15) {
   }
 
   const favorito = isFavorite(consoleId, jogo.id);
+  const galleryImages = jogo.detalhes?.imagens_galeria || [];
+  const hasGallery = galleryImages.length > 0;
 
+function handlePrevImage() {
+  if (!hasGallery) return;
+
+  setCurrentGalleryIndex((prev) =>
+    prev === 0 ? galleryImages.length - 1 : prev - 1
+  );
+}
+
+function handleNextImage() {
+  if (!hasGallery) return;
+
+  setCurrentGalleryIndex((prev) =>
+    prev === galleryImages.length - 1 ? 0 : prev + 1
+  );
+}
   return (
     <div className="game-page-container">
       <Link to={`/console/${consoleId}`} className="link-voltar">
@@ -99,12 +119,63 @@ if (count === 15) {
         <h3>Sobre o Jogo</h3>
         <p>{jogo.detalhes.descricao_longa}</p>
 
-        <h3>Galeria de Imagens</h3>
-        <div className="game-gallery">
-          {jogo.detalhes.imagens_galeria.map((img, index) => (
-            <img key={index} src={img} alt={`Screenshot ${index + 1}`} />
-          ))}
-        </div>
+         <h3>Galeria de Imagens</h3>
+
+{hasGallery && (
+  <div className="game-carousel">
+    <div className="carousel-main">
+      <img
+        src={galleryImages[currentGalleryIndex]}
+        alt={`Screenshot ${currentGalleryIndex + 1}`}
+        className="carousel-main-image"
+      />
+
+      {galleryImages.length > 1 && (
+        <>
+          <button
+            type="button"
+            className="carousel-btn prev"
+            onClick={handlePrevImage}
+            aria-label="Imagem anterior"
+          >
+            ‹
+          </button>
+
+          <button
+            type="button"
+            className="carousel-btn next"
+            onClick={handleNextImage}
+            aria-label="Próxima imagem"
+          >
+            ›
+          </button>
+        </>
+      )}
+
+      <span className="carousel-counter">
+        {currentGalleryIndex + 1} / {galleryImages.length}
+      </span>
+    </div>
+
+    {galleryImages.length > 1 && (
+      <div className="carousel-thumbnails">
+        {galleryImages.map((img, index) => (
+          <button
+            key={index}
+            type="button"
+            className={`carousel-thumb ${
+              currentGalleryIndex === index ? 'active' : ''
+            }`}
+            onClick={() => setCurrentGalleryIndex(index)}
+            aria-label={`Ver screenshot ${index + 1}`}
+          >
+            <img src={img} alt={`Miniatura ${index + 1}`} />
+          </button>
+        ))}
+      </div>
+    )}
+  </div>
+)}
         
 {jogo.detalhes.videos && jogo.detalhes.videos.length > 0 && (
   <>
