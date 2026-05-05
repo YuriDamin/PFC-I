@@ -148,7 +148,6 @@
   height: 100%;
   border: none;
 }
-
 /* === Carrossel da Galeria === */
 .game-carousel {
   display: flex;
@@ -168,14 +167,29 @@
   box-shadow: var(--shadow);
 }
 
+.carousel-image-button {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: zoom-in;
+  display: block;
+}
+
 .carousel-main-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.25s ease, filter 0.25s ease;
 }
 
-/* Botões laterais */
+.carousel-image-button:hover .carousel-main-image {
+  transform: scale(1.02);
+  filter: brightness(1.08);
+}
+
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -210,7 +224,6 @@
   right: 14px;
 }
 
-/* Contador */
 .carousel-counter {
   position: absolute;
   right: 14px;
@@ -222,9 +235,9 @@
   color: var(--text);
   font-size: 0.85rem;
   font-weight: 700;
+  z-index: 2;
 }
 
-/* Miniaturas */
 .carousel-thumbnails {
   display: flex;
   gap: 10px;
@@ -265,46 +278,7 @@
   box-shadow: var(--ring);
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .carousel-main {
-    aspect-ratio: 4 / 3;
-  }
-
-  .carousel-btn {
-    width: 36px;
-    height: 36px;
-    font-size: 1.7rem;
-  }
-
-  .carousel-thumb {
-    width: 78px;
-    height: 50px;
-  }
-}
-
-
-/* Botão invisível envolvendo a imagem principal */
-.carousel-image-button {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  border: none;
-  background: transparent;
-  cursor: zoom-in;
-  display: block;
-}
-
-.carousel-image-button .carousel-main-image {
-  transition: transform 0.25s ease, filter 0.25s ease;
-}
-
-.carousel-image-button:hover .carousel-main-image {
-  transform: scale(1.02);
-  filter: brightness(1.08);
-}
-
-/* === Modal da imagem === */
+/* === Modal da Imagem Principal === */
 .image-modal-overlay {
   position: fixed;
   inset: 0;
@@ -355,7 +329,7 @@
   font-size: 1.7rem;
   line-height: 1;
   cursor: pointer;
-  z-index: 2;
+  z-index: 4;
   transition: all 0.25s ease;
 }
 
@@ -364,6 +338,55 @@
   border-color: rgba(0, 196, 154, 0.45);
   box-shadow: var(--ring);
   transform: scale(1.05);
+}
+
+.image-modal-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 196, 154, 0.45);
+  background: rgba(12, 28, 50, 0.82);
+  color: var(--primary);
+  font-size: 2.25rem;
+  line-height: 1;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: all 0.25s ease;
+}
+
+.image-modal-nav:hover {
+  background: rgba(0, 196, 154, 0.18);
+  box-shadow: var(--ring);
+}
+
+.image-modal-nav.prev {
+  left: 18px;
+}
+
+.image-modal-nav.next {
+  right: 18px;
+}
+
+.image-modal-counter {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(12, 28, 50, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 700;
+  z-index: 3;
 }
 
 @keyframes modal-fade-in {
@@ -377,6 +400,21 @@
 }
 
 @media (max-width: 768px) {
+  .carousel-main {
+    aspect-ratio: 4 / 3;
+  }
+
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.7rem;
+  }
+
+  .carousel-thumb {
+    width: 78px;
+    height: 50px;
+  }
+
   .image-modal-overlay {
     padding: 14px;
   }
@@ -385,5 +423,24 @@
     width: 34px;
     height: 34px;
     font-size: 1.5rem;
+  }
+
+  .image-modal-nav {
+    width: 38px;
+    height: 38px;
+    font-size: 1.8rem;
+  }
+
+  .image-modal-nav.prev {
+    left: 10px;
+  }
+
+  .image-modal-nav.next {
+    right: 10px;
+  }
+
+  .image-modal-counter {
+    bottom: 12px;
+    font-size: 0.8rem;
   }
 }

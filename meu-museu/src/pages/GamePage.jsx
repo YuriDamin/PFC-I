@@ -19,24 +19,44 @@ function GamePage() {
   const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
   const [isImageModalOpen, setIsImageModalOpen] = useState(false);
 
+  const galleryImages = jogo?.detalhes?.imagens_galeria || [];
+  const hasGallery = galleryImages.length > 0;
+
   useEffect(() => {
     setCurrentGalleryIndex(0);
     setIsImageModalOpen(false);
   }, [consoleId, gameId]);
 
   useEffect(() => {
-    function handleEsc(event) {
+    function handleModalKeyDown(event) {
+      if (!isImageModalOpen) return;
+
       if (event.key === 'Escape') {
         setIsImageModalOpen(false);
+        return;
+      }
+
+      if (galleryImages.length <= 1) return;
+
+      if (event.key === 'ArrowLeft') {
+        setCurrentGalleryIndex((prev) =>
+          prev === 0 ? galleryImages.length - 1 : prev - 1
+        );
+      }
+
+      if (event.key === 'ArrowRight') {
+        setCurrentGalleryIndex((prev) =>
+          prev === galleryImages.length - 1 ? 0 : prev + 1
+        );
       }
     }
 
-    window.addEventListener('keydown', handleEsc);
+    window.addEventListener('keydown', handleModalKeyDown);
 
     return () => {
-      window.removeEventListener('keydown', handleEsc);
+      window.removeEventListener('keydown', handleModalKeyDown);
     };
-  }, []);
+  }, [isImageModalOpen, galleryImages.length]);
 
   useEffect(() => {
     if (jogo) {
@@ -83,8 +103,6 @@ function GamePage() {
   }
 
   const favorito = isFavorite(consoleId, jogo.id);
-  const galleryImages = jogo.detalhes?.imagens_galeria || [];
-  const hasGallery = galleryImages.length > 0;
 
   function handlePrevImage() {
     if (!hasGallery) return;
@@ -249,6 +267,32 @@ function GamePage() {
             >
               ×
             </button>
+
+            {galleryImages.length > 1 && (
+              <>
+                <button
+                  type="button"
+                  className="image-modal-nav prev"
+                  onClick={handlePrevImage}
+                  aria-label="Imagem anterior"
+                >
+                  ‹
+                </button>
+
+                <button
+                  type="button"
+                  className="image-modal-nav next"
+                  onClick={handleNextImage}
+                  aria-label="Próxima imagem"
+                >
+                  ›
+                </button>
+
+                <span className="image-modal-counter">
+                  {currentGalleryIndex + 1} / {galleryImages.length}
+                </span>
+              </>
+            )}
 
             <img
               src={galleryImages[currentGalleryIndex]}
