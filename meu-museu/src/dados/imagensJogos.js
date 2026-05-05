@@ -465,25 +465,28 @@ export const imagensJogos = {
   ],
 },
 
+
+
 "n64-mario64": {
   capa: "https://images.launchbox-app.com/0417a54f-46c5-45d5-89f5-1e5d82e7b5a4.jpg",
   galeria: [
-    "https://images.launchbox-app.com/r2_bef4e0b9-4cd0-41de-9338-638d9496dc55.png",
-    "https://images.launchbox-app.com/r2_356cb020-0496-4a74-8ce0-31a95bc44b54.png",
-    "https://images.launchbox-app.com/r2_612c5971-3054-49d7-8849-276028441eba.png",
-    "https://images.launchbox-app.com/r2_8691f25a-03b8-4a7f-bc37-c449f7083222.png",
-    "https://images.launchbox-app.com/r2_99b13e08-190f-41e1-9eb2-50926eb23b85.png",
+    "https://images.launchbox-app.com/8d8f2cca-35fd-44ff-9ec7-f210535d500f.png",
+    "https://images.launchbox-app.com/36898569-643c-4dd6-bc5e-f77b21ff08c6.png",
+    "https://images.launchbox-app.com/098d7c60-296f-4e4b-9b02-86aeeeec898a.png",
+    "https://images.launchbox-app.com/5a45403f-cd57-4651-8164-6593d76aa869.png",
+    "https://images.launchbox-app.com/d0eaeb5b-7c3a-4c5c-93bd-0efe15474d09.png",
   ],
 },
 
+
 "n64-zeldaoot": {
-  capa: "https://images.launchbox-app.com/r2_f2811a3e-f1bb-411b-b637-417766321261.jpg",
+  capa: "https://images.launchbox-app.com/06da83f4-2c7b-4551-9792-8e2292ff6afb.jpg",
   galeria: [
-    "https://images.launchbox-app.com/r2_52720767-0a12-40bd-a4e6-c37ea13e7131.png",
-    "https://images.launchbox-app.com/r2_7e4a4c07-1888-4a4a-b4e5-f68f9f43e889.png",
-    "https://images.launchbox-app.com/r2_6f5cf2f9-e770-4dc0-a6f5-f1b48d5f51f5.png",
-    "https://images.launchbox-app.com/r2_6dcd27f7-8f23-4f76-bdb2-3e88bfbdf172.png",
-    "https://images.launchbox-app.com/r2_3fddcb55-dc1e-498d-9094-994b98e6cb21.png",
+    "https://images.launchbox-app.com/f984cc5a-d229-4041-bc6e-de59cae7c382.jpg",
+    "https://images.launchbox-app.com/f562e6d4-73ba-404d-85dd-b89163bde864.jpg",
+    "https://images.launchbox-app.com/2be81563-4450-42f7-8265-62b85c9c575e.png",
+    "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_64/master/Named_Snaps/Legend%20of%20Zelda%2C%20The%20-%20Ocarina%20of%20Time%20%28USA%29.png",
+    "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_64/master/Named_Titles/Legend%20of%20Zelda%2C%20The%20-%20Ocarina%20of%20Time%20%28USA%29.png",
   ],
 },
 
