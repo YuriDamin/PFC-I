@@ -1231,7 +1231,7 @@ export const imagensJogos = {
 },
 
 "ps2-gta-san": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Grand%20Theft%20Auto%20-%20San%20Andreas%20%28USA%29.png",
+  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Grand%20Theft%20Auto%20-%20San%20Andreas%20%28USA%29%20%28v3.00%29.png",
   galeria: [
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Grand%20Theft%20Auto%20-%20San%20Andreas%20%28USA%29.png",
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Grand%20Theft%20Auto%20-%20San%20Andreas%20%28USA%29.png",
@@ -1255,7 +1255,7 @@ export const imagensJogos = {
 },
 
 "ps2-ffx": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Final%20Fantasy%20X%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Final%20Fantasy%20X%20%28USA%29.png",
   galeria: [
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Final%20Fantasy%20X%20%28USA%29.png",
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Final%20Fantasy%20X%20%28USA%29.png",
@@ -1271,7 +1271,7 @@ export const imagensJogos = {
 },
 
 "ps2-resident-evil-4": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Resident%20Evil%204%20%28USA%29%20%28Disc%201%29.png",
+  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Resident%20Evil%204%20%28USA%29.png",
   galeria: [
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Resident%20Evil%204%20%28USA%29%20%28Disc%201%29.png",
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Resident%20Evil%204%20%28USA%29%20%28Disc%201%29.png",
@@ -1295,7 +1295,7 @@ export const imagensJogos = {
 },
 
 "ps2-jak-and-daxter": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Jak%20and%20Daxter%20-%20The%20Precursor%20Legacy%20%28USA%29.png",
+  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Jak%20and%20Daxter%20-%20The%20Precursor%20Legacy%20%28USA%29%20%28En%2CFr%2CDe%2CEs%2CIt%29.png",
   galeria: [
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Jak%20and%20Daxter%20-%20The%20Precursor%20Legacy%20%28USA%29.png",
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Jak%20and%20Daxter%20-%20The%20Precursor%20Legacy%20%28USA%29.png",
@@ -1327,7 +1327,7 @@ export const imagensJogos = {
 },
 
 "ps2-prince-of-persia": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Prince%20of%20Persia%20-%20The%20Sands%20of%20Time%20%28USA%29.png",
+  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Prince%20of%20Persia%20-%20The%20Sands%20of%20Time%20%28USA%29%20%28En%2CFr%2CEs%29.png",
   galeria: [
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Prince%20of%20Persia%20-%20The%20Sands%20of%20Time%20%28USA%29.png",
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Prince%20of%20Persia%20-%20The%20Sands%20of%20Time%20%28USA%29.png",
@@ -1335,7 +1335,7 @@ export const imagensJogos = {
 },
 
 "ps2-ratchet-clank": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Ratchet%20%26%20Clank%20-%20Up%20Your%20Arsenal%20%28USA%29.png",
+  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Ratchet%20_%20Clank%20%28USA%29%20%28En%2CFr%2CDe%2CEs%2CIt%29.png",
   galeria: [
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Ratchet%20%26%20Clank%20-%20Up%20Your%20Arsenal%20%28USA%29.png",
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Ratchet%20%26%20Clank%20-%20Up%20Your%20Arsenal%20%28USA%29.png",
@@ -1359,7 +1359,7 @@ export const imagensJogos = {
 },
 
 "ps2-socom": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/SOCOM%20-%20U.S.%20Navy%20SEALs%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/SOCOM%20-%20U.S.%20Navy%20SEALs%20%28USA%29%20%28v3.00%29.png",
   galeria: [
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/SOCOM%20-%20U.S.%20Navy%20SEALs%20%28USA%29.png",
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/SOCOM%20-%20U.S.%20Navy%20SEALs%20%28USA%29.png",
@@ -1375,7 +1375,7 @@ export const imagensJogos = {
 },
 
 "ps2-gta-vice-city": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Grand%20Theft%20Auto%20-%20Vice%20City%20%28USA%29.png",
+  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Grand%20Theft%20Auto%20-%20Vice%20City%20%28USA%29%20%28v4.00%29.png",
   galeria: [
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Grand%20Theft%20Auto%20-%20Vice%20City%20%28USA%29.png",
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Grand%20Theft%20Auto%20-%20Vice%20City%20%28USA%29.png",
@@ -1407,7 +1407,7 @@ export const imagensJogos = {
 },
 
 "ps2-silent-hill-2": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Silent%20Hill%202%20%28USA%29.png",
+  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Silent%20Hill%202%20%28USA%29%20%28En%2CJa%2CFr%2CDe%2CEs%2CIt%29%20%28v2.01%29.png",
   galeria: [
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Silent%20Hill%202%20%28USA%29.png",
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Silent%20Hill%202%20%28USA%29.png",
@@ -1415,7 +1415,7 @@ export const imagensJogos = {
 },
 
 "ps2-okami": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Okami%20%28USA%29.png",
+  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Ookami%20%28USA%29.png",
   galeria: [
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Okami%20%28USA%29.png",
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Okami%20%28USA%29.png",
@@ -1423,7 +1423,7 @@ export const imagensJogos = {
 },
 
 "ps2-ico": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/ICO%20%28USA%29.png",
+  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Ico%20%28USA%29.png",
   galeria: [
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/ICO%20%28USA%29.png",
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/ICO%20%28USA%29.png",
@@ -1431,7 +1431,7 @@ export const imagensJogos = {
 },
 
 "ps2-jak-ii": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Jak%20II%20%28USA%29.png",
+  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Jak%20II%20%28USA%29%20%28En%2CJa%2CFr%2CDe%2CEs%2CIt%2CKo%29%20%28v2.01%29.png",
   galeria: [
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Jak%20II%20%28USA%29.png",
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Jak%20II%20%28USA%29.png",
@@ -1439,7 +1439,7 @@ export const imagensJogos = {
 },
 
 "ps2-ratchet-clank-1": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Ratchet%20%26%20Clank%20%28USA%29.png",
+  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Ratchet%20_%20Clank%20%28USA%29%20%28En%2CFr%2CDe%2CEs%2CIt%29.png",
   galeria: [
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Ratchet%20%26%20Clank%20%28USA%29.png",
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Ratchet%20%26%20Clank%20%28USA%29.png",
@@ -1495,7 +1495,7 @@ export const imagensJogos = {
 },
 
 "ps2-midnight-club-3": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Midnight%20Club%203%20-%20DUB%20Edition%20%28USA%29.png",
+  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Midnight%20Club%203%20-%20DUB%20Edition%20%28USA%29%20%28v2.00%29.png",
   galeria: [
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Midnight%20Club%203%20-%20DUB%20Edition%20%28USA%29.png",
     "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Midnight%20Club%203%20-%20DUB%20Edition%20%28USA%29.png",
