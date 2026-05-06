@@ -1231,274 +1231,274 @@ export const imagensJogos = {
 },
 
 "ps2-gta-san": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Grand%20Theft%20Auto%20-%20San%20Andreas%20%28USA%29%20%28v3.00%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Grand%20Theft%20Auto%20-%20San%20Andreas%20%28USA%29%20%28v3.00%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Grand%20Theft%20Auto%20-%20San%20Andreas%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Grand%20Theft%20Auto%20-%20San%20Andreas%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Grand%20Theft%20Auto%20-%20San%20Andreas%20%28USA%29%20%28v3.00%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Grand%20Theft%20Auto%20-%20San%20Andreas%20%28USA%29%20%28v3.00%29.png",
   ],
 },
 
 "ps2-godofwar": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/God%20of%20War%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/God%20of%20War%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/God%20of%20War%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/God%20of%20War%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/God%20of%20War%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/God%20of%20War%20%28USA%29.png",
   ],
 },
 
 "ps2-shadow": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Shadow%20of%20the%20Colossus%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Shadow%20of%20the%20Colossus%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Shadow%20of%20the%20Colossus%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Shadow%20of%20the%20Colossus%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Shadow%20of%20the%20Colossus%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Shadow%20of%20the%20Colossus%20%28USA%29.png",
   ],
 },
 
 "ps2-ffx": {
   capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Final%20Fantasy%20X%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Final%20Fantasy%20X%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Final%20Fantasy%20X%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Final%20Fantasy%20X%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Final%20Fantasy%20X%20%28USA%29.png",
   ],
 },
 
 "ps2-mgs2": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Metal%20Gear%20Solid%202%20-%20Sons%20of%20Liberty%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Metal%20Gear%20Solid%202%20-%20Sons%20of%20Liberty%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Metal%20Gear%20Solid%202%20-%20Sons%20of%20Liberty%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Metal%20Gear%20Solid%202%20-%20Sons%20of%20Liberty%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Metal%20Gear%20Solid%202%20-%20Sons%20of%20Liberty%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Metal%20Gear%20Solid%202%20-%20Sons%20of%20Liberty%20%28USA%29.png",
   ],
 },
 
 "ps2-resident-evil-4": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Resident%20Evil%204%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Resident%20Evil%204%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Resident%20Evil%204%20%28USA%29%20%28Disc%201%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Resident%20Evil%204%20%28USA%29%20%28Disc%201%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Resident%20Evil%204%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Resident%20Evil%204%20%28USA%29.png",
   ],
 },
 
 "ps2-devil-may-cry": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Devil%20May%20Cry%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Devil%20May%20Cry%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Devil%20May%20Cry%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Devil%20May%20Cry%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Devil%20May%20Cry%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Devil%20May%20Cry%20%28USA%29.png",
   ],
 },
 
 "ps2-tekken-5": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Tekken%205%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Tekken%205%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Tekken%205%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Tekken%205%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Tekken%205%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Tekken%205%20%28USA%29.png",
   ],
 },
 
 "ps2-jak-and-daxter": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Jak%20and%20Daxter%20-%20The%20Precursor%20Legacy%20%28USA%29%20%28En%2CFr%2CDe%2CEs%2CIt%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Jak%20and%20Daxter%20-%20The%20Precursor%20Legacy%20%28USA%29%20%28En%2CFr%2CDe%2CEs%2CIt%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Jak%20and%20Daxter%20-%20The%20Precursor%20Legacy%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Jak%20and%20Daxter%20-%20The%20Precursor%20Legacy%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Jak%20and%20Daxter%20-%20The%20Precursor%20Legacy%20%28USA%29%20%28En%2CFr%2CDe%2CEs%2CIt%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Jak%20and%20Daxter%20-%20The%20Precursor%20Legacy%20%28USA%29%20%28En%2CFr%2CDe%2CEs%2CIt%29.png",
   ],
 },
 
 "ps2-burnout-3": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Burnout%203%20-%20Takedown%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Burnout%203%20-%20Takedown%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Burnout%203%20-%20Takedown%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Burnout%203%20-%20Takedown%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Burnout%203%20-%20Takedown%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Burnout%203%20-%20Takedown%20%28USA%29.png",
   ],
 },
 
 "ps2-kh": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Kingdom%20Hearts%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Kingdom%20Hearts%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Kingdom%20Hearts%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Kingdom%20Hearts%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Kingdom%20Hearts%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Kingdom%20Hearts%20%28USA%29.png",
   ],
 },
 
 "ps2-onimusha": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Onimusha%20-%20Warlords%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Onimusha%20-%20Warlords%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Onimusha%20-%20Warlords%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Onimusha%20-%20Warlords%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Onimusha%20-%20Warlords%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Onimusha%20-%20Warlords%20%28USA%29.png",
   ],
 },
 
 "ps2-prince-of-persia": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Prince%20of%20Persia%20-%20The%20Sands%20of%20Time%20%28USA%29%20%28En%2CFr%2CEs%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Prince%20of%20Persia%20-%20The%20Sands%20of%20Time%20%28USA%29%20%28En%2CFr%2CEs%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Prince%20of%20Persia%20-%20The%20Sands%20of%20Time%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Prince%20of%20Persia%20-%20The%20Sands%20of%20Time%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Prince%20of%20Persia%20-%20The%20Sands%20of%20Time%20%28USA%29%20%28En%2CFr%2CEs%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Prince%20of%20Persia%20-%20The%20Sands%20of%20Time%20%28USA%29%20%28En%2CFr%2CEs%29.png",
   ],
 },
 
 "ps2-ratchet-clank": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Ratchet%20_%20Clank%20%28USA%29%20%28En%2CFr%2CDe%2CEs%2CIt%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Ratchet%20_%20Clank%20-%20Up%20Your%20Arsenal%20%28USA%29%20%28En%2CFr%2CEs%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Ratchet%20%26%20Clank%20-%20Up%20Your%20Arsenal%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Ratchet%20%26%20Clank%20-%20Up%20Your%20Arsenal%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Ratchet%20_%20Clank%20-%20Up%20Your%20Arsenal%20%28USA%29%20%28En%2CFr%2CEs%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Ratchet%20_%20Clank%20-%20Up%20Your%20Arsenal%20%28USA%29%20%28En%2CFr%2CEs%29.png",
   ],
 },
 
 "ps2-splinter-cell": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Tom%20Clancy%27s%20Splinter%20Cell%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Tom%20Clancy%27s%20Splinter%20Cell%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Tom%20Clancy%27s%20Splinter%20Cell%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Tom%20Clancy%27s%20Splinter%20Cell%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Tom%20Clancy%27s%20Splinter%20Cell%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Tom%20Clancy%27s%20Splinter%20Cell%20%28USA%29.png",
   ],
 },
 
 "ps2-guitar-hero": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Guitar%20Hero%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Guitar%20Hero%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Guitar%20Hero%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Guitar%20Hero%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Guitar%20Hero%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Guitar%20Hero%20%28USA%29.png",
   ],
 },
 
 "ps2-socom": {
   capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/SOCOM%20-%20U.S.%20Navy%20SEALs%20%28USA%29%20%28v3.00%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/SOCOM%20-%20U.S.%20Navy%20SEALs%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/SOCOM%20-%20U.S.%20Navy%20SEALs%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/SOCOM%20-%20U.S.%20Navy%20SEALs%20%28USA%29%20%28v3.00%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/SOCOM%20-%20U.S.%20Navy%20SEALs%20%28USA%29%20%28v3.00%29.png",
   ],
 },
 
 "ps2-ssx-tricky": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/SSX%20Tricky%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/SSX%20Tricky%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/SSX%20Tricky%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/SSX%20Tricky%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/SSX%20Tricky%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/SSX%20Tricky%20%28USA%29.png",
   ],
 },
 
 "ps2-gta-vice-city": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Grand%20Theft%20Auto%20-%20Vice%20City%20%28USA%29%20%28v4.00%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Grand%20Theft%20Auto%20-%20Vice%20City%20%28USA%29%20%28v4.00%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Grand%20Theft%20Auto%20-%20Vice%20City%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Grand%20Theft%20Auto%20-%20Vice%20City%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Grand%20Theft%20Auto%20-%20Vice%20City%20%28USA%29%20%28v4.00%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Grand%20Theft%20Auto%20-%20Vice%20City%20%28USA%29%20%28v4.00%29.png",
   ],
 },
 
 "ps2-gta-iii": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Grand%20Theft%20Auto%20III%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Grand%20Theft%20Auto%20III%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Grand%20Theft%20Auto%20III%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Grand%20Theft%20Auto%20III%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Grand%20Theft%20Auto%20III%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Grand%20Theft%20Auto%20III%20%28USA%29.png",
   ],
 },
 
 "ps2-godofwar2": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/God%20of%20War%20II%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/God%20of%20War%20II%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/God%20of%20War%20II%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/God%20of%20War%20II%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/God%20of%20War%20II%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/God%20of%20War%20II%20%28USA%29.png",
   ],
 },
 
 "ps2-mgs3": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Metal%20Gear%20Solid%203%20-%20Snake%20Eater%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Metal%20Gear%20Solid%203%20-%20Snake%20Eater%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Metal%20Gear%20Solid%203%20-%20Snake%20Eater%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Metal%20Gear%20Solid%203%20-%20Snake%20Eater%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Metal%20Gear%20Solid%203%20-%20Snake%20Eater%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Metal%20Gear%20Solid%203%20-%20Snake%20Eater%20%28USA%29.png",
   ],
 },
 
 "ps2-silent-hill-2": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Silent%20Hill%202%20%28USA%29%20%28En%2CJa%2CFr%2CDe%2CEs%2CIt%29%20%28v2.01%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Silent%20Hill%202%20%28USA%29%20%28En%2CJa%2CFr%2CDe%2CEs%2CIt%29%20%28v2.01%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Silent%20Hill%202%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Silent%20Hill%202%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Silent%20Hill%202%20%28USA%29%20%28En%2CJa%2CFr%2CDe%2CEs%2CIt%29%20%28v2.01%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Silent%20Hill%202%20%28USA%29%20%28En%2CJa%2CFr%2CDe%2CEs%2CIt%29%20%28v2.01%29.png",
   ],
 },
 
 "ps2-okami": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Ookami%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Ookami%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Okami%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Okami%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Ookami%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Ookami%20%28USA%29.png",
   ],
 },
 
 "ps2-ico": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Ico%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Ico%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/ICO%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/ICO%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Ico%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Ico%20%28USA%29.png",
   ],
 },
 
 "ps2-jak-ii": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Jak%20II%20%28USA%29%20%28En%2CJa%2CFr%2CDe%2CEs%2CIt%2CKo%29%20%28v2.01%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Jak%20II%20%28USA%29%20%28En%2CJa%2CFr%2CDe%2CEs%2CIt%2CKo%29%20%28v2.01%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Jak%20II%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Jak%20II%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Jak%20II%20%28USA%29%20%28En%2CJa%2CFr%2CDe%2CEs%2CIt%2CKo%29%20%28v2.01%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Jak%20II%20%28USA%29%20%28En%2CJa%2CFr%2CDe%2CEs%2CIt%2CKo%29%20%28v2.01%29.png",
   ],
 },
 
 "ps2-ratchet-clank-1": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Ratchet%20_%20Clank%20%28USA%29%20%28En%2CFr%2CDe%2CEs%2CIt%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Ratchet%20_%20Clank%20%28USA%29%20%28En%2CFr%2CDe%2CEs%2CIt%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Ratchet%20%26%20Clank%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Ratchet%20%26%20Clank%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Ratchet%20_%20Clank%20%28USA%29%20%28En%2CFr%2CDe%2CEs%2CIt%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Ratchet%20_%20Clank%20%28USA%29%20%28En%2CFr%2CDe%2CEs%2CIt%29.png",
   ],
 },
 
 "ps2-sly-cooper": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Sly%20Cooper%20and%20the%20Thievius%20Raccoonus%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Sly%20Cooper%20and%20the%20Thievius%20Raccoonus%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Sly%20Cooper%20and%20the%20Thievius%20Raccoonus%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Sly%20Cooper%20and%20the%20Thievius%20Raccoonus%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Sly%20Cooper%20and%20the%20Thievius%20Raccoonus%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Sly%20Cooper%20and%20the%20Thievius%20Raccoonus%20%28USA%29.png",
   ],
 },
 
 "ps2-persona-4": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Shin%20Megami%20Tensei%20-%20Persona%204%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Shin%20Megami%20Tensei%20-%20Persona%204%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Shin%20Megami%20Tensei%20-%20Persona%204%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Shin%20Megami%20Tensei%20-%20Persona%204%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Shin%20Megami%20Tensei%20-%20Persona%204%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Shin%20Megami%20Tensei%20-%20Persona%204%20%28USA%29.png",
   ],
 },
 
 "ps2-bully": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Bully%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Bully%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Bully%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Bully%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Bully%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Bully%20%28USA%29.png",
   ],
 },
 
 "ps2-need-for-speed-underground-2": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Need%20for%20Speed%20-%20Underground%202%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Need%20for%20Speed%20-%20Underground%202%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Need%20for%20Speed%20-%20Underground%202%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Need%20for%20Speed%20-%20Underground%202%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Need%20for%20Speed%20-%20Underground%202%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Need%20for%20Speed%20-%20Underground%202%20%28USA%29.png",
   ],
 },
 
 "ps2-dragon-ball-budokai-3": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Dragon%20Ball%20Z%20-%20Budokai%203%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Dragon%20Ball%20Z%20-%20Budokai%203%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Dragon%20Ball%20Z%20-%20Budokai%203%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Dragon%20Ball%20Z%20-%20Budokai%203%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Dragon%20Ball%20Z%20-%20Budokai%203%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Dragon%20Ball%20Z%20-%20Budokai%203%20%28USA%29.png",
   ],
 },
 
 "ps2-naruto-ultimate-ninja-3": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Naruto%20-%20Ultimate%20Ninja%203%20%28USA%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Naruto%20-%20Ultimate%20Ninja%203%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Naruto%20-%20Ultimate%20Ninja%203%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Naruto%20-%20Ultimate%20Ninja%203%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Naruto%20-%20Ultimate%20Ninja%203%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Naruto%20-%20Ultimate%20Ninja%203%20%28USA%29.png",
   ],
 },
 
 "ps2-midnight-club-3": {
-  capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Midnight%20Club%203%20-%20DUB%20Edition%20%28USA%29%20%28v2.00%29.png",
+  capa: "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Boxarts/Midnight%20Club%203%20-%20DUB%20Edition%20%28USA%29%20%28v2.00%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Snaps/Midnight%20Club%203%20-%20DUB%20Edition%20%28USA%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Titles/Midnight%20Club%203%20-%20DUB%20Edition%20%28USA%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Snaps/Midnight%20Club%203%20-%20DUB%20Edition%20%28USA%29%20%28v2.00%29.png",
+    "https://thumbnails.libretro.com/Sony%20-%20PlayStation%202/Named_Titles/Midnight%20Club%203%20-%20DUB%20Edition%20%28USA%29%20%28v2.00%29.png",
   ],
 },
 };
