@@ -1139,14 +1139,14 @@ export const videosJogos = {
 "ps2-gta-san": [
   {
     titulo: "Gameplay de Grand Theft Auto: San Andreas",
-    url: "https://www.youtube.com/embed/BQG4qz7t0dA",
+    url: "https://www.youtube.com/embed/-UULRZry27E",
   },
 ],
 
 "ps2-godofwar": [
   {
     titulo: "Gameplay de God of War",
-    url: "https://www.youtube.com/embed/0VhJ0vW0gW8",
+    url: "https://www.youtube.com/embed/xZSm_tF0o54",
   },
 ],
 
