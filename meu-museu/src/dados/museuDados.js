@@ -17,21 +17,16 @@ function aplicarMidias(consoleItem) {
       return {
         ...jogo,
 
-        // Se existir capa no imagensJogos.js, usa ela.
-        // Senão, mantém a imagem que já veio do arquivo do console.
         imagem_url: imagens?.capa || jogo.imagem_url,
 
         detalhes: {
           ...jogo.detalhes,
 
-          // Se existir galeria no imagensJogos.js, usa ela.
-          // Senão, mantém a galeria original do jogo.
           imagens_galeria:
             imagens?.galeria ||
             jogo.detalhes.imagens_galeria ||
             [],
 
-          // Mesma lógica para vídeos.
           videos:
             videosJogos[jogo.id] ||
             jogo.detalhes.videos ||
