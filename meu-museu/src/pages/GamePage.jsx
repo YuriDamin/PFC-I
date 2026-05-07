@@ -9,8 +9,9 @@ import './GamePage.css';
 
 function GamePage() {
   const { consoleId, gameId } = useParams();
-  const console = getConsoleById(consoleId);
+  const consoleData = getConsoleById(consoleId);
   const jogo = getGameById(consoleId, gameId);
+
   const { addXP } = useXP();
   const { isFavorite, toggleFavorite } = useFavorites();
   const { unlock } = useAchievements();
@@ -21,6 +22,27 @@ function GamePage() {
 
   const galleryImages = jogo?.detalhes?.imagens_galeria || [];
   const hasGallery = galleryImages.length > 0;
+
+  function handleImageError(event) {
+    event.currentTarget.onerror = null;
+    event.currentTarget.src = '/imagens/placeholder-game.png';
+  }
+
+  function handlePrevImage() {
+    if (!hasGallery) return;
+
+    setCurrentGalleryIndex((prev) =>
+      prev === 0 ? galleryImages.length - 1 : prev - 1
+    );
+  }
+
+  function handleNextImage() {
+    if (!hasGallery) return;
+
+    setCurrentGalleryIndex((prev) =>
+      prev === galleryImages.length - 1 ? 0 : prev + 1
+    );
+  }
 
   useEffect(() => {
     setCurrentGalleryIndex(0);
@@ -59,41 +81,43 @@ function GamePage() {
   }, [isImageModalOpen, galleryImages.length]);
 
   useEffect(() => {
-    if (jogo) {
-      const xpKey = `xp_given_${consoleId}_${gameId}`;
-      const alreadyGiven = sessionStorage.getItem(xpKey);
+    if (!jogo) return;
 
-      if (!alreadyGiven) {
-        addXP(10);
-        setToast({
-          message: `✨ +10 XP! Você explorou "${jogo.titulo}".`,
-          type: 'success',
-        });
+    const xpKey = `xp_given_${consoleId}_${gameId}`;
+    const alreadyGiven = sessionStorage.getItem(xpKey);
 
-        sessionStorage.setItem(xpKey, 'true');
-      }
+    if (!alreadyGiven) {
+      addXP(10);
+      setToast({
+        message: `✨ +10 XP! Você explorou "${jogo.titulo}".`,
+        type: 'success',
+      });
+
+      sessionStorage.setItem(xpKey, 'true');
     }
   }, [consoleId, gameId, jogo, addXP]);
 
   useEffect(() => {
-    if (jogo && console) {
-      const key = `games_${consoleId}`;
-      const count = parseInt(localStorage.getItem(key) || '0', 10) + 1;
-      localStorage.setItem(key, count);
+    if (!jogo || !consoleData) return;
 
-      if (count === 5) {
-        unlock(`${key}_5`, `Explorou 5 jogos do ${console.nome}`);
-      }
-      if (count === 10) {
-        unlock(`${key}_10`, `Explorou 10 jogos do ${console.nome}`);
-      }
-      if (count === 15) {
-        unlock(`${key}_15`, `Explorou 15 jogos do ${console.nome}`);
-      }
+    const key = `games_${consoleId}`;
+    const count = parseInt(localStorage.getItem(key) || '0', 10) + 1;
+    localStorage.setItem(key, count.toString());
+
+    if (count === 5) {
+      unlock(`${key}_5`, `Explorou 5 jogos do ${consoleData.nome}`);
     }
-  }, [consoleId, jogo, console, unlock]);
 
-  if (!console || !jogo) {
+    if (count === 10) {
+      unlock(`${key}_10`, `Explorou 10 jogos do ${consoleData.nome}`);
+    }
+
+    if (count === 15) {
+      unlock(`${key}_15`, `Explorou 15 jogos do ${consoleData.nome}`);
+    }
+  }, [consoleId, jogo, consoleData, unlock]);
+
+  if (!consoleData || !jogo) {
     return (
       <div style={{ textAlign: 'center', padding: '20px' }}>
         <h2>Ops! Jogo não encontrado.</h2>
@@ -104,59 +128,53 @@ function GamePage() {
 
   const favorito = isFavorite(consoleId, jogo.id);
 
-  function handlePrevImage() {
-    if (!hasGallery) return;
-
-    setCurrentGalleryIndex((prev) =>
-      prev === 0 ? galleryImages.length - 1 : prev - 1
-    );
-  }
-
-  function handleNextImage() {
-    if (!hasGallery) return;
-
-    setCurrentGalleryIndex((prev) =>
-      prev === galleryImages.length - 1 ? 0 : prev + 1
-    );
-  }
-
   return (
     <div className="game-page-container">
       <Link to={`/console/${consoleId}`} className="link-voltar">
-        &larr; Voltar para {console.nome}
+        &larr; Voltar para {consoleData.nome}
       </Link>
 
       <div className="game-header">
         <img
-          src={jogo.imagem_url}
+          src={jogo.imagem_url || '/images/placeholder-game.png'}
           alt={jogo.titulo}
           className="game-main-image"
+          onError={handleImageError}
         />
+
         <div className="game-header-info">
           <h1>{jogo.titulo}</h1>
 
-          {/* --- Botão de Favoritar --- */}
           <button
+            type="button"
             onClick={() => toggleFavorite(consoleId, jogo)}
             className={`favorite-btn ${favorito ? 'active' : ''}`}
           >
             {favorito ? '💖 Remover dos Favoritos' : '⭐ Adicionar aos Favoritos'}
           </button>
 
-          <p><strong>Plataforma:</strong> {console.nome}</p>
-          <p><strong>Ano:</strong> {jogo.ano}</p>
-          <p><strong>Gênero:</strong> {jogo.genero}</p>
-          <p><strong>Desenvolvedora:</strong> {jogo.desenvolvedora}</p>
+          <p>
+            <strong>Plataforma:</strong> {consoleData.nome}
+          </p>
+          <p>
+            <strong>Ano:</strong> {jogo.ano}
+          </p>
+          <p>
+            <strong>Gênero:</strong> {jogo.genero}
+          </p>
+          <p>
+            <strong>Desenvolvedora:</strong> {jogo.desenvolvedora}
+          </p>
         </div>
       </div>
 
       <div className="game-content">
         <h3>Sobre o Jogo</h3>
-        <p>{jogo.detalhes.descricao_longa}</p>
+        <p>{jogo.detalhes?.descricao_longa || 'Sem descrição disponível.'}</p>
 
         <h3>Galeria de Imagens</h3>
 
-        {hasGallery && (
+        {hasGallery ? (
           <div className="game-carousel">
             <div className="carousel-main">
               <button
@@ -166,9 +184,10 @@ function GamePage() {
                 aria-label="Abrir imagem em tela cheia"
               >
                 <img
-                  src={galleryImages[currentGalleryIndex]}
+                  src={galleryImages[currentGalleryIndex] || '/images/placeholder-game.png'}
                   alt={`Screenshot ${currentGalleryIndex + 1}`}
                   className="carousel-main-image"
+                  onError={handleImageError}
                 />
               </button>
 
@@ -203,7 +222,7 @@ function GamePage() {
               <div className="carousel-thumbnails">
                 {galleryImages.map((img, index) => (
                   <button
-                    key={index}
+                    key={img || index}
                     type="button"
                     className={`carousel-thumb ${
                       currentGalleryIndex === index ? 'active' : ''
@@ -211,21 +230,27 @@ function GamePage() {
                     onClick={() => setCurrentGalleryIndex(index)}
                     aria-label={`Ver screenshot ${index + 1}`}
                   >
-                    <img src={img} alt={`Miniatura ${index + 1}`} />
+                    <img
+                      src={img || '/images/placeholder-game.png'}
+                      alt={`Miniatura ${index + 1}`}
+                      onError={handleImageError}
+                    />
                   </button>
                 ))}
               </div>
             )}
           </div>
+        ) : (
+          <p>Este jogo ainda não possui imagens na galeria.</p>
         )}
 
-        {jogo.detalhes.videos && jogo.detalhes.videos.length > 0 && (
+        {jogo.detalhes?.videos?.length > 0 && (
           <>
             <h3>Vídeos</h3>
 
             <div className="game-videos">
               {jogo.detalhes.videos.map((video, index) => (
-                <div className="video-card" key={index}>
+                <div className="video-card" key={video.url || index}>
                   <h4>{video.titulo}</h4>
 
                   <div className="video-wrapper">
@@ -234,7 +259,7 @@ function GamePage() {
                       title={video.titulo}
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       allowFullScreen
-                    ></iframe>
+                    />
                   </div>
                 </div>
               ))}
@@ -243,11 +268,16 @@ function GamePage() {
         )}
 
         <h3>Dicas e Curiosidades</h3>
-        <ul className="game-tips">
-          {jogo.detalhes.dicas.map((dica, index) => (
-            <li key={index}>{dica}</li>
-          ))}
-        </ul>
+
+        {jogo.detalhes?.dicas?.length > 0 ? (
+          <ul className="game-tips">
+            {jogo.detalhes.dicas.map((dica, index) => (
+              <li key={index}>{dica}</li>
+            ))}
+          </ul>
+        ) : (
+          <p>Este jogo ainda não possui dicas cadastradas.</p>
+        )}
       </div>
 
       {isImageModalOpen && hasGallery && (
@@ -257,7 +287,7 @@ function GamePage() {
         >
           <div
             className="image-modal-content"
-            onClick={(e) => e.stopPropagation()}
+            onClick={(event) => event.stopPropagation()}
           >
             <button
               type="button"
@@ -295,15 +325,15 @@ function GamePage() {
             )}
 
             <img
-              src={galleryImages[currentGalleryIndex]}
+              src={galleryImages[currentGalleryIndex] || '/images/placeholder-game.png'}
               alt={`Screenshot ampliado ${currentGalleryIndex + 1}`}
               className="image-modal-img"
+              onError={handleImageError}
             />
           </div>
         </div>
       )}
 
-      {/* --- Toast de XP ou Favorito --- */}
       {toast && (
         <Toast
           message={toast.message}
