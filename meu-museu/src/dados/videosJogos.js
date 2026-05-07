@@ -1155,224 +1155,224 @@ export const videosJogos = {
 "ps2-shadow": [
   {
     titulo: "Gameplay de Shadow of the Colossus",
-    url: "https://www.youtube.com/embed/J3qGgCWHkO4",
+    url: "https://www.youtube.com/embed/xMKtYM8AzC8",
   },
 ],
 
 "ps2-ffx": [
   {
     titulo: "Gameplay de Final Fantasy X",
-    url: "https://www.youtube.com/embed/7GqUnJROmzw",
+    url: "https://www.youtube.com/embed/2Jfwovi4obU",
   },
 ],
 
 "ps2-mgs2": [
   {
     titulo: "Gameplay de Metal Gear Solid 2: Sons of Liberty",
-    url: "https://www.youtube.com/embed/FEhS3YsE9TM",
+    url: "https://www.youtube.com/embed/Cy3P9bU3iFk",
   },
 ],
 
 "ps2-resident-evil-4": [
   {
     titulo: "Gameplay de Resident Evil 4",
-    url: "https://www.youtube.com/embed/Upas6M_7fmg",
+    url: "https://www.youtube.com/embed/JEXQM7eyudc",
   },
 ],
 
 "ps2-devil-may-cry": [
   {
     titulo: "Gameplay de Devil May Cry",
-    url: "https://www.youtube.com/embed/P3p8nlkYoOY",
+    url: "https://www.youtube.com/embed/26woLPX4c4k",
   },
 ],
 
 "ps2-tekken-5": [
   {
     titulo: "Gameplay de Tekken 5",
-    url: "https://www.youtube.com/embed/L6gN4_bMhAA",
+    url: "https://www.youtube.com/embed/KRWKz9qjuoo",
   },
 ],
 
 "ps2-jak-and-daxter": [
   {
     titulo: "Gameplay de Jak and Daxter: The Precursor Legacy",
-    url: "https://www.youtube.com/embed/6h9q6pTwA8U",
+    url: "https://www.youtube.com/embed/GizhaoJwYOs",
   },
 ],
 
 "ps2-burnout-3": [
   {
     titulo: "Gameplay de Burnout 3: Takedown",
-    url: "https://www.youtube.com/embed/vbK2S8H2uzM",
+    url: "https://www.youtube.com/embed/7OVswdR_iCY",
   },
 ],
 
 "ps2-kh": [
   {
     titulo: "Gameplay de Kingdom Hearts",
-    url: "https://www.youtube.com/embed/WjJkdcPjjY4",
+    url: "https://www.youtube.com/embed/7qSZK-z9C0U",
   },
 ],
 
 "ps2-onimusha": [
   {
     titulo: "Gameplay de Onimusha: Warlords",
-    url: "https://www.youtube.com/embed/bxV8oZe8Ngg",
+    url: "https://www.youtube.com/embed/bRXrrscvfcQ",
   },
 ],
 
 "ps2-prince-of-persia": [
   {
     titulo: "Gameplay de Prince of Persia: The Sands of Time",
-    url: "https://www.youtube.com/embed/E8QDxHf0l0E",
+    url: "https://www.youtube.com/embed/dEvmZheWAFU",
   },
 ],
 
 "ps2-ratchet-clank": [
   {
     titulo: "Gameplay de Ratchet & Clank: Up Your Arsenal",
-    url: "https://www.youtube.com/embed/DeD8h4CoG3c",
+    url: "https://www.youtube.com/embed/9JMFs9PadRk",
   },
 ],
 
 "ps2-splinter-cell": [
   {
     titulo: "Gameplay de Tom Clancy's Splinter Cell",
-    url: "https://www.youtube.com/embed/3WL4PwmULz8",
+    url: "https://www.youtube.com/embed/6VDspvvU2hQ",
   },
 ],
 
 "ps2-guitar-hero": [
   {
     titulo: "Gameplay de Guitar Hero",
-    url: "https://www.youtube.com/embed/3eYh7W9iX-k",
+    url: "https://www.youtube.com/embed/slJA7xwDRWk",
   },
 ],
 
 "ps2-socom": [
   {
     titulo: "Gameplay de SOCOM U.S. Navy SEALs",
-    url: "https://www.youtube.com/embed/HdEK1rHfZ-w",
+    url: "https://www.youtube.com/embed/kLPjGnPv3Y8",
   },
 ],
 
 "ps2-ssx-tricky": [
   {
     titulo: "Gameplay de SSX Tricky",
-    url: "https://www.youtube.com/embed/xavlzPa8QqQ",
+    url: "https://www.youtube.com/embed/hor4NoAC5tg",
   },
 ],
 
 "ps2-gta-vice-city": [
   {
     titulo: "Gameplay de Grand Theft Auto: Vice City",
-    url: "https://www.youtube.com/embed/0OthvWDwK6A",
+    url: "https://www.youtube.com/embed/sx2R2HvJkak",
   },
 ],
 
 "ps2-gta-iii": [
   {
     titulo: "Gameplay de Grand Theft Auto III",
-    url: "https://www.youtube.com/embed/WUi3davvBmM",
+    url: "https://www.youtube.com/embed/SpyANivIFi0",
   },
 ],
 
 "ps2-godofwar2": [
   {
     titulo: "Gameplay de God of War II",
-    url: "https://www.youtube.com/embed/WrR9T0i_7bY",
+    url: "https://www.youtube.com/embed/TrkfqOwhoLk",
   },
 ],
 
 "ps2-mgs3": [
   {
     titulo: "Gameplay de Metal Gear Solid 3: Snake Eater",
-    url: "https://www.youtube.com/embed/Qodc0x3Gx6k",
+    url: "https://www.youtube.com/embed/N6ZSAPD4SL8",
   },
 ],
 
 "ps2-silent-hill-2": [
   {
     titulo: "Gameplay de Silent Hill 2",
-    url: "https://www.youtube.com/embed/21s45Yel5VM",
+    url: "https://www.youtube.com/embed/VUnvAuauSW4",
   },
 ],
 
 "ps2-okami": [
   {
     titulo: "Gameplay de Ōkami",
-    url: "https://www.youtube.com/embed/7m-wWcHc66E",
+    url: "https://www.youtube.com/embed/2S-GTAEM_nY",
   },
 ],
 
 "ps2-ico": [
   {
     titulo: "Gameplay de Ico",
-    url: "https://www.youtube.com/embed/R0bAMf3Zr4w",
+    url: "https://www.youtube.com/embed/JBm-RRm6-TQ",
   },
 ],
 
 "ps2-jak-ii": [
   {
     titulo: "Gameplay de Jak II",
-    url: "https://www.youtube.com/embed/b8T_c52R-i0",
+    url: "https://www.youtube.com/embed/LJPHoQzc4Bw",
   },
 ],
 
 "ps2-ratchet-clank-1": [
   {
     titulo: "Gameplay de Ratchet & Clank",
-    url: "https://www.youtube.com/embed/8EekfVhV74I",
+    url: "https://www.youtube.com/embed/Di2D3mP7TsM",
   },
 ],
 
 "ps2-sly-cooper": [
   {
     titulo: "Gameplay de Sly Cooper and the Thievius Raccoonus",
-    url: "https://www.youtube.com/embed/tlJYqKAK8ZA",
+    url: "https://www.youtube.com/embed/U6G9-6sZlhU",
   },
 ],
 
 "ps2-persona-4": [
   {
     titulo: "Gameplay de Persona 4",
-    url: "https://www.youtube.com/embed/T8qpfz3d7v8",
+    url: "https://www.youtube.com/embed/tDtEtCL7tL8",
   },
 ],
 
 "ps2-bully": [
   {
     titulo: "Gameplay de Bully",
-    url: "https://www.youtube.com/embed/hQhz6QmYqE4",
+    url: "https://www.youtube.com/embed/fWbe5YwxxsM",
   },
 ],
 
 "ps2-need-for-speed-underground-2": [
   {
     titulo: "Gameplay de Need for Speed: Underground 2",
-    url: "https://www.youtube.com/embed/g17zU9AWyDg",
+    url: "https://www.youtube.com/embed/r_-GJ2NAKfg",
   },
 ],
 
 "ps2-dragon-ball-budokai-3": [
   {
     titulo: "Gameplay de Dragon Ball Z: Budokai 3",
-    url: "https://www.youtube.com/embed/uQJfHFMQY6g",
+    url: "https://www.youtube.com/embed/u7LMWprmdBM",
   },
 ],
 
 "ps2-naruto-ultimate-ninja-3": [
   {
     titulo: "Gameplay de Naruto: Ultimate Ninja 3",
-    url: "https://www.youtube.com/embed/0o5mxJm8zLg",
+    url: "https://www.youtube.com/embed/uXCcM1xpNFM",
   },
 ],
 
 "ps2-midnight-club-3": [
   {
     titulo: "Gameplay de Midnight Club 3: DUB Edition",
-    url: "https://www.youtube.com/embed/7Z8WEX4KNyM",
+    url: "https://www.youtube.com/embed/vkh4gRe9_1Y",
   },
 ],
 
