@@ -704,7 +704,7 @@ export const videosJogos = {
 "md-sonic": [
   {
     titulo: "Gameplay de Sonic the Hedgehog 2",
-    url: "https://www.youtube.com/embed/G0VqjOHLrlc",
+    url: "https://www.youtube.com/embed/8cr1rqVcIhA",
   },
 ],
 
@@ -718,205 +718,206 @@ export const videosJogos = {
 "md-goldenaxe": [
   {
     titulo: "Gameplay de Golden Axe",
-    url: "https://www.youtube.com/embed/dlUtWm0ZNq4",
+    url: "https://www.youtube.com/embed/kLzblT3JWVU",
   },
 ],
 
 "md-phantasy-star-4": [
   {
     titulo: "Gameplay de Phantasy Star IV",
-    url: "https://www.youtube.com/embed/GJ3b-6z8bQM",
+    url: "https://www.youtube.com/embed/BPMxoOdO_Io",
   },
 ],
 
 "md-shining-force": [
   {
     titulo: "Gameplay de Shining Force II",
-    url: "https://www.youtube.com/embed/zD1m6HlhSlI",
+    url: "https://www.youtube.com/embed/OU7LoM4DHW8",
   },
 ],
 
 "md-castlevania-bloodlines": [
   {
     titulo: "Gameplay de Castlevania: Bloodlines",
-    url: "https://www.youtube.com/embed/3t6-h4VGR_E",
+    url: "https://www.youtube.com/embed/6uf5lN435hw",
   },
 ],
 
 "md-vectorman": [
   {
     titulo: "Gameplay de Vectorman",
-    url: "https://www.youtube.com/embed/4VeOEHT0FLU",
+    url: "https://www.youtube.com/embed/NcL_kM9twZk",
   },
 ],
 
 "md-gunstar-heroes": [
   {
     titulo: "Gameplay de Gunstar Heroes",
-    url: "https://www.youtube.com/embed/vqEIkSe3FhI",
+    url: "https://www.youtube.com/embed/deH_QOFK4Z8",
   },
 ],
 
 "md-thunder-force-4": [
   {
     titulo: "Gameplay de Thunder Force IV",
-    url: "https://www.youtube.com/embed/i_R2W7ZSMB8",
+    url: "https://www.youtube.com/embed/EmO8WGx1hcE",
   },
 ],
 
 "md-mortal-kombat-2": [
   {
     titulo: "Gameplay de Mortal Kombat II",
-    url: "https://www.youtube.com/embed/nzpe1jQVyKQ",
+    url: "https://www.youtube.com/embed/dHo1S4xy5qs",
   },
 ],
 
 "md-decap-attack": [
   {
     titulo: "Gameplay de Decap Attack",
-    url: "https://www.youtube.com/embed/YuHXLjjJH6g",
+    url: "https://www.youtube.com/embed/4YpxkphszDo",
   },
 ],
 
 "md-toe-jam-earl": [
   {
     titulo: "Gameplay de ToeJam & Earl",
-    url: "https://www.youtube.com/embed/3Fveq6M2l4Y",
+    url: "https://www.youtube.com/embed/29TaGhYZZlA",
   },
 ],
 
 "md-micro-machines": [
   {
     titulo: "Gameplay de Micro Machines",
-    url: "https://www.youtube.com/embed/zZeGfXfY3OQ",
+    url: "https://www.youtube.com/embed/vRmVC9AVRBs",
   },
 ],
 
 "md-comix-zone": [
   {
     titulo: "Gameplay de Comix Zone",
-    url: "https://www.youtube.com/embed/yS6E5gkf9zU",
+    url: "https://www.youtube.com/embed/4V4csjRgaXs",
   },
 ],
 
 "md-shining-in-the-darkness": [
   {
     titulo: "Gameplay de Shining in the Darkness",
-    url: "https://www.youtube.com/embed/DVkMJm7qD3k",
+    url: "https://www.youtube.com/embed/J3P5JJ35-Og",
   },
 ],
 
 "md-wonder-boy-in-monster-world": [
   {
     titulo: "Gameplay de Wonder Boy in Monster World",
-    url: "https://www.youtube.com/embed/5P37p9eY8Ak",
+    url: "https://www.youtube.com/embed/xDRlLZAe1LY",
   },
 ],
 
 "md-aladdin": [
   {
     titulo: "Gameplay de Disney's Aladdin",
-    url: "https://www.youtube.com/embed/5iZtDm4Q7l4",
+    url: "https://www.youtube.com/embed/uWhJOIFKtm8",
   },
 ],
 
 "md-road-rash-2": [
   {
     titulo: "Gameplay de Road Rash II",
-    url: "https://www.youtube.com/embed/mMDjHlP3-2k",
+    url: "https://www.youtube.com/embed/fWnlQnposC4",
   },
 ],
 
 "md-kid-chameleon": [
   {
     titulo: "Gameplay de Kid Chameleon",
-    url: "https://www.youtube.com/embed/MlD0WzjlnY4",
+    url: "https://www.youtube.com/embed/vcOj1JeM6Pk",
   },
 ],
 
 "md-sonic-3": [
   {
     titulo: "Gameplay de Sonic the Hedgehog 3",
-    url: "https://www.youtube.com/embed/1wM4HtS9BVY",
+    url: "https://www.youtube.com/embed/uPxe0IaFyjo",
   },
 ],
 
 "md-sonic-knuckles": [
   {
     titulo: "Gameplay de Sonic & Knuckles",
-    url: "https://www.youtube.com/embed/NZ6rj7O5Vv0",
+    url: "https://www.youtube.com/embed/UFkRcp_ZsPI",
   },
 ],
 
 "md-earthworm-jim": [
   {
     titulo: "Gameplay de Earthworm Jim",
-    url: "https://www.youtube.com/embed/0qGbnC9qS1o",
+    url: "https://www.youtube.com/embed/xhNv476tAs8",
   },
 ],
 
 "md-ristar": [
   {
     titulo: "Gameplay de Ristar",
-    url: "https://www.youtube.com/embed/KfP2D3hHkHo",
+    url: "https://www.youtube.com/embed/c42yOLO_mk4",
   },
 ],
 
 "md-ecco": [
   {
     titulo: "Gameplay de Ecco the Dolphin",
-    url: "https://www.youtube.com/embed/QT0vMFN4Y9Q",
+    url: "https://www.youtube.com/embed/It_eOIPgCdE",
   },
 ],
 
 "md-rocket-knight": [
   {
     titulo: "Gameplay de Rocket Knight Adventures",
-    url: "https://www.youtube.com/embed/L70U-j6jzJ0",
+    url: "https://www.youtube.com/embed/dtId7oQz8-s",
   },
 ],
 
 "md-maximum-carnage": [
   {
     titulo: "Gameplay de Spider-Man and Venom: Maximum Carnage",
-    url: "https://www.youtube.com/embed/V24GQ4U_sP4",
+    url: "https://www.youtube.com/embed/tLDi9fvBrbU",
   },
 ],
 
 "md-jurassic-park": [
   {
     titulo: "Gameplay de Jurassic Park",
-    url: "https://www.youtube.com/embed/eJm1KjGz2rU",
+    url: "https://www.youtube.com/embed/4VsMRHEj2CE",
   },
 ],
 
 "md-fifa-94": [
   {
     titulo: "Gameplay de FIFA International Soccer",
-    url: "https://www.youtube.com/embed/PL5h5rLFE10",
+    url: "https://www.youtube.com/embed/Qb82YZs75gg",
   },
 ],
 
 "md-nba-jam": [
   {
     titulo: "Gameplay de NBA Jam",
-    url: "https://www.youtube.com/embed/B9HqvQmAc2U",
+    url: "https://www.youtube.com/embed/Lom7jgnDCoE",
   },
 ],
 
 "md-virtual-racing": [
   {
     titulo: "Gameplay de Virtua Racing",
-    url: "https://www.youtube.com/embed/lj6r0DlWc0U",
+    url: "https://www.youtube.com/embed/9HdiwJ-61J4",
   },
 ],
 
 "md-strider": [
   {
     titulo: "Gameplay de Strider",
-    url: "https://www.youtube.com/embed/4OxWq4P3jLk",
+    url: "https://www.youtube.com/embed/hzL3Mj12Ilg",
   },
 ],
+
 
 // =====================================================
 // PlayStation 1
