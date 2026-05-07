@@ -486,21 +486,21 @@ export const videosJogos = {
 "n64-mario64": [
   {
     titulo: "Gameplay de Super Mario 64",
-    url: "https://www.youtube.com/embed/9QwCjJ_8BQI",
+    url: "https://www.youtube.com/embed/9QwCjJ_8BQI&t=4s",
   },
 ],
 
 "n64-zeldaoot": [
   {
     titulo: "Gameplay de The Legend of Zelda: Ocarina of Time",
-    url: "https://www.youtube.com/embed/YFKsm4y1lJ8",
+    url: "https://www.youtube.com/embed/EfUoDfnH9ew",
   },
 ],
 
 "n64-goldeneye": [
   {
     titulo: "Gameplay de GoldenEye 007",
-    url: "https://www.youtube.com/embed/rjXcOTPfePQ",
+    url: "https://www.youtube.com/embed/ktwVEYqnpcc",
   },
 ],
 
@@ -514,189 +514,189 @@ export const videosJogos = {
 "n64-smashbros": [
   {
     titulo: "Gameplay de Super Smash Bros.",
-    url: "https://www.youtube.com/embed/i1F3ZC8rv1w",
+    url: "https://www.youtube.com/embed/h9UofM5LehY",
   },
 ],
 
 "n64-perfectdark": [
   {
     titulo: "Gameplay de Perfect Dark",
-    url: "https://www.youtube.com/embed/6x6_iY9Rr2g",
+    url: "https://www.youtube.com/embed/VuGZ2n6VcYQ",
   },
 ],
 
 "n64-banjokazooie": [
   {
     titulo: "Gameplay de Banjo-Kazooie",
-    url: "https://www.youtube.com/embed/85kHVz7x2f4",
+    url: "https://www.youtube.com/embed/iyhvSNsQI-c",
   },
 ],
 
 "n64-starfox64": [
   {
     titulo: "Gameplay de Star Fox 64",
-    url: "https://www.youtube.com/embed/VK5aJ8u0J4o",
+    url: "https://www.youtube.com/embed/FU-a6ZkF0io",
   },
 ],
 
 "n64-marioparty": [
   {
     titulo: "Gameplay de Mario Party",
-    url: "https://www.youtube.com/embed/hfNkbpAtZ0Y",
+    url: "https://www.youtube.com/embed/DmLrA8K6ckk",
   },
 ],
 
 "n64-fzero-x": [
   {
     titulo: "Gameplay de F-Zero X",
-    url: "https://www.youtube.com/embed/0_7W1Kf4t1A",
+    url: "https://www.youtube.com/embed/j2uy78sLQak",
   },
 ],
 
 "n64-pokemonsnap": [
   {
     titulo: "Gameplay de Pokémon Snap",
-    url: "https://www.youtube.com/embed/4XvP5wq9Ubc",
+    url: "https://www.youtube.com/embed/RbqnZa8A3YY",
   },
 ],
 
 "n64-dk64": [
   {
     titulo: "Gameplay de Donkey Kong 64",
-    url: "https://www.youtube.com/embed/dWDOjYQzWTM",
+    url: "https://www.youtube.com/embed/wXM3PIv4wLQ",
   },
 ],
 
 "n64-wave-race": [
   {
     titulo: "Gameplay de Wave Race 64",
-    url: "https://www.youtube.com/embed/lN2qK6Gg2xI",
+    url: "https://www.youtube.com/embed/Oi-Kz4Y-8Lw",
   },
 ],
 
 "n64-roguesquadron": [
   {
     titulo: "Gameplay de Star Wars: Rogue Squadron",
-    url: "https://www.youtube.com/embed/8kLJmUoGh4Q",
+    url: "https://www.youtube.com/embed/YWwmCFAGesQ",
   },
 ],
 
 "n64-excitebike64": [
   {
     titulo: "Gameplay de Excitebike 64",
-    url: "https://www.youtube.com/embed/LXQHh6hFbI8",
+    url: "https://www.youtube.com/embed/1K6yEi4AzI0",
   },
 ],
 
 "n64-papermario": [
   {
     titulo: "Gameplay de Paper Mario",
-    url: "https://www.youtube.com/embed/mQ3W9JuvhQQ",
+    url: "https://www.youtube.com/embed/1W9TDAv9qYU",
   },
 ],
 
 "n64-cruisn-usa": [
   {
     titulo: "Gameplay de Cruis'n USA",
-    url: "https://www.youtube.com/embed/P7l5jE7zqkA",
+    url: "https://www.youtube.com/embed/fG_V5YRG5C0",
   },
 ],
 
 "n64-residentevil2": [
   {
     titulo: "Gameplay de Resident Evil 2",
-    url: "https://www.youtube.com/embed/oWw8A4W5D_8",
+    url: "https://www.youtube.com/embed/cOEB3TGQAIc",
   },
 ],
 
 "n64-battle-for-naboo": [
   {
     titulo: "Gameplay de Star Wars Episode I: Battle for Naboo",
-    url: "https://www.youtube.com/embed/TULxg9hm1_0",
+    url: "https://www.youtube.com/embed/2tM3mB_QB_o",
   },
 ],
 
 "n64-jetforcegemini": [
   {
     titulo: "Gameplay de Jet Force Gemini",
-    url: "https://www.youtube.com/embed/oe1W2FSk43o",
+    url: "https://www.youtube.com/embed/nLT46BqE-OI",
   },
 ],
 
 "n64-bomberman64": [
   {
     titulo: "Gameplay de Bomberman 64",
-    url: "https://www.youtube.com/embed/GpAfYYWrwCk",
+    url: "https://www.youtube.com/embed/mE1DaVMN6pE",
   },
 ],
 
 "n64-yoshis-story": [
   {
     titulo: "Gameplay de Yoshi's Story",
-    url: "https://www.youtube.com/embed/iG2X6RZ0BIQ",
+    url: "https://www.youtube.com/embed/IrXzq8ZTDCo",
   },
 ],
 
 "n64-kirby64": [
   {
     titulo: "Gameplay de Kirby 64: The Crystal Shards",
-    url: "https://www.youtube.com/embed/J_tQqVex9Zk",
+    url: "https://www.youtube.com/embed/Y-T50ZB4JVg",
   },
 ],
 
 "n64-mariogolf": [
   {
     titulo: "Gameplay de Mario Golf",
-    url: "https://www.youtube.com/embed/WzECLZcG5j0",
+    url: "https://www.youtube.com/embed/U1Fo0I3nqa8",
   },
 ],
 
 "n64-mariotennis": [
   {
     titulo: "Gameplay de Mario Tennis",
-    url: "https://www.youtube.com/embed/7G9gRtmmkG8",
+    url: "https://www.youtube.com/embed/Q3A9SV8MISk",
   },
 ],
 
 "n64-snowboardkids": [
   {
     titulo: "Gameplay de Snowboard Kids",
-    url: "https://www.youtube.com/embed/p4AtQ0ukTZs",
+    url: "https://www.youtube.com/embed/YvE0F631jfA",
   },
 ],
 
 "n64-turok": [
   {
     titulo: "Gameplay de Turok: Dinosaur Hunter",
-    url: "https://www.youtube.com/embed/h4eueDYPTIg",
+    url: "https://www.youtube.com/embed/8qXRXavPLAw",
   },
 ],
 
 "n64-doom64": [
   {
     titulo: "Gameplay de Doom 64",
-    url: "https://www.youtube.com/embed/o8n1U6YlQ6s",
+    url: "https://www.youtube.com/embed/SEQvVSmYlHQ",
   },
 ],
 
 "n64-rayman2": [
   {
     titulo: "Gameplay de Rayman 2: The Great Escape",
-    url: "https://www.youtube.com/embed/37MXJ2dJ6Yo",
+    url: "https://www.youtube.com/embed/XpTPIXUOMzM",
   },
 ],
 
 "n64-ogre-battle64": [
   {
     titulo: "Gameplay de Ogre Battle 64: Person of Lordly Caliber",
-    url: "https://www.youtube.com/embed/nIYtJvwpJ1A",
+    url: "https://www.youtube.com/embed/20ISriddgpw",
   },
 ],
 
 "n64-beetle-adventure-racing": [
   {
     titulo: "Gameplay de Beetle Adventure Racing",
-    url: "https://www.youtube.com/embed/LddZyNueU7Y",
+    url: "https://www.youtube.com/embed/64HStgMYTZY",
   },
 ],
 
