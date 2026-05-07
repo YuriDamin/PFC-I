@@ -479,7 +479,7 @@ export const videosJogos = {
       url: "https://www.youtube.com/embed/Z6hjG6MCcZ8",
     },
   ],
-  
+
 // =====================================================
 // Nintendo 64
 // =====================================================
@@ -927,7 +927,7 @@ export const videosJogos = {
 "ps1-metal-gear": [
   {
     titulo: "Gameplay de Metal Gear Solid",
-    url: "https://www.youtube.com/embed/VFszW8qcZ4w",
+    url: "https://www.youtube.com/embed/vOcJK_SKiOc",
   },
 ],
 
@@ -983,7 +983,7 @@ export const videosJogos = {
 "ps1-castlevania-sotn": [
   {
     titulo: "Gameplay de Castlevania: Symphony of the Night",
-    url: "https://www.youtube.com/embed/PsF3mdmbyPY",
+    url: "https://www.youtube.com/embed/5HnhPNS0rqM",
   },
 ],
 
@@ -1011,14 +1011,14 @@ export const videosJogos = {
 "ps1-medievil": [
   {
     titulo: "Gameplay de MediEvil",
-    url: "https://www.youtube.com/embed/6e2YnOnveUU",
+    url: "https://www.youtube.com/embed/GHauKasmgIk",
   },
 ],
 
 "ps1-wipeout": [
   {
     titulo: "Gameplay de Wipeout",
-    url: "https://www.youtube.com/embed/bPRGEuLVRU8",
+    url: "https://www.youtube.com/embed/4SJ27_uIHKs",
   },
 ],
 
@@ -1032,49 +1032,49 @@ export const videosJogos = {
 "ps1-parasite-eve": [
   {
     titulo: "Gameplay de Parasite Eve",
-    url: "https://www.youtube.com/embed/jYlV8L7q6dU",
+    url: "https://www.youtube.com/embed/UQy8AqHoWMI",
   },
 ],
 
 "ps1-v-rally": [
   {
     titulo: "Gameplay de V-Rally: Championship Edition",
-    url: "https://www.youtube.com/embed/QtA8g94pUuE",
+    url: "https://www.youtube.com/embed/xNBSoI0NB7o",
   },
 ],
 
 "ps1-oddworld-abe": [
   {
     titulo: "Gameplay de Oddworld: Abe's Oddysee",
-    url: "https://www.youtube.com/embed/3IgG5Hq4C3M",
+    url: "https://www.youtube.com/embed/XwJoDSjpZiI",
   },
 ],
 
 "ps1-crash-team-racing": [
   {
     titulo: "Gameplay de Crash Team Racing",
-    url: "https://www.youtube.com/embed/NVqW9C1gUqE",
+    url: "https://www.youtube.com/embed/QQDWEIiKN6E",
   },
 ],
 
 "ps1-spyro-2": [
   {
     titulo: "Gameplay de Spyro 2: Ripto's Rage!",
-    url: "https://www.youtube.com/embed/NEsF7iMTRFI",
+    url: "https://www.youtube.com/embed/L9ePJJp1P8E",
   },
 ],
 
 "ps1-final-fantasy-viii": [
   {
     titulo: "Gameplay de Final Fantasy VIII",
-    url: "https://www.youtube.com/embed/oH5E7QZkxDU",
+    url: "https://www.youtube.com/embed/7gju07aWVBM",
   },
 ],
 
 "ps1-final-fantasy-ix": [
   {
     titulo: "Gameplay de Final Fantasy IX",
-    url: "https://www.youtube.com/embed/QVnZpXkl_LM",
+    url: "https://www.youtube.com/embed/Y7g2PXscFGk",
   },
 ],
 
@@ -1088,14 +1088,14 @@ export const videosJogos = {
 "ps1-suikoden-2": [
   {
     titulo: "Gameplay de Suikoden II",
-    url: "https://www.youtube.com/embed/EwNbfb0DNTQ",
+    url: "https://www.youtube.com/embed/5I7zeD3lUxM",
   },
 ],
 
 "ps1-vagrant-story": [
   {
     titulo: "Gameplay de Vagrant Story",
-    url: "https://www.youtube.com/embed/_1mX4D5qOZA",
+    url: "https://www.youtube.com/embed/fXzuMcOCIQw",
   },
 ],
 
@@ -1109,28 +1109,28 @@ export const videosJogos = {
 "ps1-driver": [
   {
     titulo: "Gameplay de Driver",
-    url: "https://www.youtube.com/embed/QO6vNo3tPys",
+    url: "https://www.youtube.com/embed/as4JWnokyxA",
   },
 ],
 
 "ps1-ape-escape": [
   {
     titulo: "Gameplay de Ape Escape",
-    url: "https://www.youtube.com/embed/rmNfub4Fmk4",
+    url: "https://www.youtube.com/embed/gj16mlPcpIk",
   },
 ],
 
 "ps1-dino-crisis": [
   {
     titulo: "Gameplay de Dino Crisis",
-    url: "https://www.youtube.com/embed/c3gKzKs1dQY",
+    url: "https://www.youtube.com/embed/y_v81zSpuMA",
   },
 ],
 
 "ps1-soul-reaver": [
   {
     titulo: "Gameplay de Legacy of Kain: Soul Reaver",
-    url: "https://www.youtube.com/embed/4g-5Gp8VtTY",
+    url: "https://www.youtube.com/embed/g-Z8f_fhEow",
   },
 ],
 

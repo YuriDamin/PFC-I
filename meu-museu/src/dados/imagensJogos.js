@@ -997,8 +997,8 @@ export const imagensJogos = {
 "ps1-final-fantasy-vii": {
   capa: "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation/master/Named_Boxarts/Final%20Fantasy%20VII%20%28USA%29.png",
   galeria: [
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation/master/Named_Snaps/Final%20Fantasy%20VII%20%28USA%29%20%28Disc%201%29.png",
-    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation/master/Named_Titles/Final%20Fantasy%20VII%20%28USA%29%20%28Disc%201%29.png",
+      "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation/master/Named_Snaps/Final%20Fantasy%20VII%20%28USA%29.png",
+    "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation/master/Named_Titles/Final%20Fantasy%20VII%20%28USA%29.png"
   ],
 },
 
