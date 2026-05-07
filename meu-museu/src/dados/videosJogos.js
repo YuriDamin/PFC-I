@@ -486,7 +486,7 @@ export const videosJogos = {
 "n64-mario64": [
   {
     titulo: "Gameplay de Super Mario 64",
-    url: "https://www.youtube.com/embed/9QwCjJ_8BQI&t=4s",
+    url: "https://www.youtube.com/embed/vT3AaQ77ges",
   },
 ],
 

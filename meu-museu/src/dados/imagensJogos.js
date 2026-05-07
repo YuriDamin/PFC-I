@@ -468,7 +468,7 @@ export const imagensJogos = {
 
 
 "n64-mario64": {
-  capa: "https://images.launchbox-app.com/0417a54f-46c5-45d5-89f5-1e5d82e7b5a4.jpg",
+  capa: "https://images.launchbox-app.com/7626b423-054f-4261-9fba-16067cf1e9a3.jpg",
   galeria: [
     "https://images.launchbox-app.com/8d8f2cca-35fd-44ff-9ec7-f210535d500f.png",
     "https://images.launchbox-app.com/36898569-643c-4dd6-bc5e-f77b21ff08c6.png",
@@ -502,7 +502,7 @@ export const imagensJogos = {
 },
 
 "n64-mariokart64": {
-  capa: "https://images.launchbox-app.com/93f5fd67-5a73-42bb-9921-d0a3edc75ae3.jpg",
+  capa: "https://images.launchbox-app.com/8c7f3d9a-95ff-4214-8604-2b1ff550aa31.jpg",
   galeria: [
     "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_64/master/Named_Snaps/Mario%20Kart%2064%20%28USA%29.png",
     "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_64/master/Named_Titles/Mario%20Kart%2064%20%28USA%29.png",
