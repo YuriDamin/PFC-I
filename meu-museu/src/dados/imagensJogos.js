@@ -1,9 +1,5 @@
 export const imagensJogos = {
 
-// =====================================================
-// NES - imagens externas sem upload.wikimedia
-// Fonte: libretro-thumbnails / GitHub
-// =====================================================
 
 "nes-mario-3": {
   capa: "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_Entertainment_System/master/Named_Boxarts/Super%20Mario%20Bros.%203%20%28USA%29.png",
